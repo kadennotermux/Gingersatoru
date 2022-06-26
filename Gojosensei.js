@@ -229,7 +229,7 @@ const reply = (teks) => {
             console.log('Limit Reseted')
         }, {
             scheduled: true,
-            timezone: "Asia/Kolkata"
+            timezone: "Africa/Nairobi"
         })
         
 	//auto set bio\\
@@ -245,14 +245,14 @@ const reply = (teks) => {
 	  //antilink\\
         if (db.data.chats[m.chat].antilink) {
         if (budy.match(`chat.whatsapp.com`)) {
-        reply(`「 ANTI LINK 」\n\nYou have been detected sending a group link, sorry you will be kicked !`)
+        reply(`「 ANTI LINK  DETECTOR」\n\nYou have been detected sending a link, Umbwaa ghasiaaa ,Bye bye!!😂😂😂see u in kinoo🥲🤣 !`)
         if (!isBotAdmins) return reply(`I Am Not An Admin, How Could I Kick Somebody Who Send Link 😒`)
-        let gclink = (`https://chat.whatsapp.com/`+await GojoMdNx.groupInviteCode(m.chat))
+        let gclink = (`https:///`+await GojoMdNx.groupInviteCode(m.chat))
         let isLinkThisGc = new RegExp(gclink, 'i')
         let isgclink = isLinkThisGc.test(m.text)
         if (isgclink) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Sent This Group Link❤️`)
         if (isAdmins) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Are An Admin Of The Group❤️`)
-        if (isCreator) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Are My Owner Hahahahah🤣😘, You Think I Will Betray You Huh🐦`)
+        if (isCreator) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Are My Owner Hahahahah🤣😘, You Think I Will Betray You Huh⛷`)
         GojoMdNx.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
         }
@@ -594,7 +594,7 @@ if (q.includes('--help')) return reply(examkosong)
      teksehmazeh += `*🐄Cow* : ${getSapi(m.sender)}\n`
      teksehmazeh += `*🐘Elephant* : ${getGajah(m.sender)}\n\n`
      teksehmazeh += `_*${pushname}*_`
-     await GojoMdNx.send5ButImg(from, `` + '' + teksehmazeh, `© ${footer}`, GojoMdNx, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}}])
+     await GojoMdNx.send5ButImg(from, `` + '' + teksehmazeh, `© ${footer}`, GojoMdNx, [{"urlButton": {"displayText": "📺Utube📺","url": `${myweb}`}}])
   }
   break
         case 'userlimit': 
@@ -1366,7 +1366,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                if (!text) return replay(`Example : ${prefix + command} packname|author`)
           global.packname = text.split("|")[0]
           global.author = text.split("|")[1]
-          reply(`Exif Has Been Successfully Changed to\n\n🐦 Packname : ${global.packname}\n🐦 Author : ${global.author}`)
+          reply(`Exif Has Been Successfully Changed to\n\n⛷ Packname : ${global.packname}\n⛷ Author : ${global.author}`)
             }
             break
 	case 'kick': {
@@ -1454,11 +1454,11 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
-let teks = `╚»˙·٠•●♥ Tag All ♥●•٠·˙«╝ 
+let teks = `⛨ *Tagging All Participants* ⛨ 
  
  ➲ *Message : ${q ? q : 'no message'}*\n\n`
                 for (let mem of participants) {
-                teks += `🐦 @${mem.id.split('@')[0]}\n`
+                teks += `⛷ @${mem.id.split('@')[0]}\n`
                 }
                 GojoMdNx.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
@@ -1478,7 +1478,7 @@ let teks = `╚»˙·٠•●♥ Tag All ♥●•٠·˙«╝
                 let anu = await styletext(text)
                 let teks = `Entered Text ${text}\n\n`
                 for (let i of anu) {
-                    teks += `🐦 *${i.name}* : ${i.result}\n\n`
+                    teks += `⛷ *${i.name}* : ${i.result}\n\n`
                 }
                 reply(teks)
 	    }
@@ -1498,14 +1498,14 @@ let teks = `╚»˙·٠•●♥ Tag All ♥●•٠·˙«╝
 
 ┌〔 UPVOTE 〕
 │ 
-┃╠ Total: ${vote[m.chat][1].length}
+┃☆⚩Total: ${vote[m.chat][1].length}
 │
 │ 
 └────
 
 ┌〔 DEVOTE 〕
 │ 
-┃╠ Total: ${vote[m.chat][2].length}
+┃☆⚩Total: ${vote[m.chat][2].length}
 │
 │ 
 └────
@@ -1539,15 +1539,15 @@ let buttonsVote = [
 
 ┌〔 UPVOTE 〕
 │ 
-┃╠ Total: ${vote[m.chat][1].length}
-${vote[m.chat][1].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
+┃☆⚩Total: ${vote[m.chat][1].length}
+${vote[m.chat][1].map((v, i) => `┃☆⚩${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
 
 ┌〔 DEVOTE 〕
 │ 
-┃╠ Total: ${vote[m.chat][2].length}
-${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
+┃☆⚩Total: ${vote[m.chat][2].length}
+${vote[m.chat][2].map((v, i) => `┃☆⚩${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
 
@@ -1581,15 +1581,15 @@ ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')
 
 ┌〔 UPVOTE 〕
 │ 
-┃╠ Total: ${vote[m.chat][1].length}
-${vote[m.chat][1].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
+┃☆⚩Total: ${vote[m.chat][1].length}
+${vote[m.chat][1].map((v, i) => `┃☆⚩${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
 
 ┌〔 DEVOTE 〕
 │ 
-┃╠ Total: ${vote[m.chat][2].length}
-${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
+┃☆⚩Total: ${vote[m.chat][2].length}
+${vote[m.chat][2].map((v, i) => `┃☆⚩${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
 
@@ -1619,15 +1619,15 @@ teks_vote = `*「 VOTE 」*
 
 ┌〔 UPVOTE 〕
 │ 
-┃╠ Total: ${upvote.length}
-${vote[m.chat][1].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
+┃☆⚩Total: ${upvote.length}
+${vote[m.chat][1].map((v, i) => `┃☆⚩${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
 
 ┌〔 DEVOTE 〕
 │ 
-┃╠ Total: ${devote.length}
-${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
+┃☆⚩Total: ${devote.length}
+${vote[m.chat][2].map((v, i) => `┃☆⚩${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
 
@@ -1759,26 +1759,26 @@ break
                     await sleep(1500)
                     let btn = [{
                                 urlButton: {
-                                    displayText: 'Script🔖',
+                                    displayText: '🖋Source',
                                     url: `${sc}`
                                 }
                             }, {
                                 urlButton: {
-                                    displayText: 'YouTube📍',
+                                    displayText: '📺Utube📺',
                                     url: `${myweb}`
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '🎀Menu🎀',
+                                    displayText: '🔮See Me🔮',
                                     id: 'menu'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '👤Owner👤',
+                                    displayText: '😈Creator👿',
                                     id: 'owner'
                                 }
                             }]
-                      let txt = `「 GOJO-SATORU HERE🎉 」\n\n${text}`
+                      let txt = `「 ⛨ⒼⒷⓈ⛨🎉 」\n\n${text}`
                       GojoMdNx.send5ButImg(i, txt, GojoMdNx.user.name, global.thumb, btn)
                     }
                 reply(`Successful Sending Broadcast To ${anu.length} Group(s)`)
@@ -1793,26 +1793,26 @@ break
 		    await sleep(1500)
 		    let btn = [{
                                 urlButton: {
-                                    displayText: 'Script🔖',
+                                    displayText: '🖋Source',
                                     url: `${sc}`
                                 }
                             }, {
                                 urlButton: {
-                                    displayText: 'YouTube📍',
+                                    displayText: '📺Utube📺',
                                     url: `${myweb}`
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '🎀Menu🎀',
+                                    displayText: '🔮See Me🔮',
                                     id: 'menu'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '👤Owner👤',
+                                    displayText: '😈Creator👿',
                                     id: 'owner'
                                 }
                             }]
-                      let txt = `「 GOJO-SATORU HERE 🎉」\n\n${text}`
+                      let txt = `「 ⛨ⒼⒷⓈ⛨  🎉」\n\n${text}`
                       GojoMdNx.send5ButImg(yoi, txt, GojoMdNx.user.name, global.thumb, btn)
 		}
 		reply('Broadcast Success')
@@ -1827,8 +1827,8 @@ break
                     let read = i.readTimestamp
                     let unread = i.receiptTimestamp
                     let waktu = read ? read : unread
-                    teks += `🐦 @${i.userJid.split('@')[0]}\n`
-                    teks += ` ┗━🐦 *Time :* ${moment(waktu * 1000).format('DD/MM/YY HH:mm:ss')} 🐦 *Status :* ${read ? 'Read' : 'Sent'}\n\n`
+                    teks += `⛷ @${i.userJid.split('@')[0]}\n`
+                    teks += ` ┗━⛷ *Time :* ${moment(waktu * 1000).format('DD/MM/YY HH:mm:ss')} ⛷ *Status :* ${read ? 'Read' : 'Sent'}\n\n`
                 }
                 GojoMdNx.sendTextWithMentions(m.chat, teks, m)
             }
@@ -1855,7 +1855,7 @@ break
                  let teks = `⬣ *GROUP CHAT LIST*\n\nTotal Group : ${anu.length} Group\n\n`
                  for (let i of anu) {
                      let metadata = await GojoMdNx.groupMetadata(i)
-                     teks += `💫 *Name :* ${metadata.subject}\n💫 *Owner :* @${metadata.owner.split('@')[0]}\n💫 *ID :* ${metadata.id}\n💫 *Made :* ${moment(metadata.creation * 1000).tz('Asia/Kolkata').format('DD/MM/YYYY HH:mm:ss')}\n💫 *Member :* ${metadata.participants.length}\n\n────────────────────────\n\n`
+                     teks += `💫 *Name :* ${metadata.subject}\n💫 *Owner :* @${metadata.owner.split('@')[0]}\n💫 *ID :* ${metadata.id}\n💫 *Made :* ${moment(metadata.creation * 1000).tz('Africa/Nairobi').format('DD/MM/YYYY HH:mm:ss')}\n💫 *Member :* ${metadata.participants.length}\n\n────────────────────────\n\n`
                  }
                  GojoMdNx.sendTextWithMentions(m.chat, teks, m)
              }
@@ -1863,7 +1863,7 @@ break
              case 'listonlinexxx': case 'onlinelistxxx': {
                     let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
                     let online = [...Object.keys(store.presences[id]), botNumber]
-                    GojoMdNx.sendText(m.chat, 'Online List:\n\n' + online.map(v => '🐦 @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
+                    GojoMdNx.sendText(m.chat, '🛡Groups Online List:\n\n' + online.map(v => '⛷ @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
              }
              break
             case 'sticker': case 's': case 'stickergif': case 'sgif': {
@@ -2036,7 +2036,7 @@ break
                 let teks = 'YouTube Search\n\n Result From '+text+'\n\n'
                 let no = 1
                 for (let i of search.all) {
-                    teks += `🐦 No : ${no++}\n🐦 Type : ${i.type}\n🐦 Video ID : ${i.videoId}\n🐦 Title : ${i.title}\n🐦 Views : ${i.views}\n🐦 Duration : ${i.timestamp}\n🐦 Uploaded On : ${i.ago}\n🐦 Author : ${i.author.name}\n🐦 Url : ${i.url}\n\n─────────────────\n\n`
+                    teks += `⛷ No : ${no++}\n⛷ Type : ${i.type}\n⛷ Video ID : ${i.videoId}\n⛷ Title : ${i.title}\n⛷ Views : ${i.views}\n⛷ Duration : ${i.timestamp}\n⛷ Uploaded On : ${i.ago}\n⛷ Author : ${i.author.name}\n⛷ Url : ${i.url}\n\n─────────────────\n\n`
                 }
                 GojoMdNx.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: m })
             }
@@ -2047,9 +2047,9 @@ break
                 google({'query': text}).then(res => {
                 let teks = `Google Search Title : ${text}\n\n`
                 for (let g of res) {
-                teks += `🐦 *Title* : ${g.title}\n`
-                teks += `🐦 *Description* : ${g.snippet}\n`
-                teks += `🐦 *Link* : ${g.link}\n\n────────────────────────\n\n`
+                teks += `⛷ *Title* : ${g.title}\n`
+                teks += `⛷ *Description* : ${g.snippet}\n`
+                teks += `⛷ *Link* : ${g.link}\n\n────────────────────────\n\n`
                 } 
                 reply(teks)
                 })
@@ -2089,16 +2089,12 @@ break
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
                     caption: `
-🐦 Title : ${anu.title}
-🐦 Ext : Search
-🐦 ID : ${anu.videoId}
-🐦 Duration : ${anu.timestamp}
-🐦 Viewes : ${anu.views}
-🐦 Uploaded On : ${anu.ago}
-🐦 Author : ${anu.author.name}
-🐦 Channel : ${anu.author.url}
-🐦 Description : ${anu.description}
-🐦 Url : ${anu.url}`,
+🔊 *Title* : ${anu.title}
+🎙 *Ext* : Search
+😊 *Author* : ${anu.author.name}
+📺 *Channel* : ${anu.author.url}
+🖋 *Description* : ${anu.description}
+🔗 *Url* : ${anu.url}`,
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2109,10 +2105,10 @@ break
 	    case 'ytmp3': case 'getmusic': case 'ytaudio': {
                 let { yta } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
-                let quality = args[1] ? args[1] : '320kbps'
+                let quality = args[1] ? args[1] : '128kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                GojoMdNx.sendImage(m.chat, media.thumb, `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${isUrl(text)}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '320kbps'}`, m)
+                GojoMdNx.sendImage(m.chat, media.thumb, `⛷ Title : ${media.title}\n⛷ File Size : ${media.filesizeF}\n⛷ Url : ${isUrl(text)}\n⛷ Ext : MP3\n⛷ Resolution : ${args[1] || '128kbps'}`, m)
                 GojoMdNx.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
@@ -2122,7 +2118,7 @@ break
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${isUrl(text)}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '360p'}` }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `⛷ Title : ${media.title}\n⛷ File Size : ${media.filesizeF}\n⛷ Url : ${isUrl(text)}\n⛷ Ext : MP3\n⛷ Resolution : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
 	    case 'getmusicxxx': {
@@ -2131,7 +2127,7 @@ break
                 let quality = args[1] ? args[1] : '128kbps'
                 let media = await yta(urls[text - 1], quality)
                 if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
-                GojoMdNx.sendImage(m.chat, media.thumb, `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${urls[text - 1]}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '128kbps'}`, m)
+                GojoMdNx.sendImage(m.chat, media.thumb, `⛷ Title : ${media.title}\n⛷ File Size : ${media.filesizeF}\n⛷ Url : ${urls[text - 1]}\n⛷ Ext : MP3\n⛷ Resolution : ${args[1] || '128kbps'}`, m)
                 GojoMdNx.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
@@ -2145,7 +2141,7 @@ break
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(urls[text - 1], quality)
                 if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
-                GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${urls[text - 1]}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '360p'}` }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `⛷ Title : ${media.title}\n⛷ File Size : ${media.filesizeF}\n⛷ Url : ${urls[text - 1]}\n⛷ Ext : MP3\n⛷ Resolution : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
             case 'pinterest': {
@@ -2153,7 +2149,7 @@ break
 		let { pinterest } = require('./lib/scraper')
                 anu = await pinterest(text)
                 result = anu[Math.floor(Math.random() * anu.length)]
-                GojoMdNx.sendMessage(m.chat, { image: { url: result }, caption: '🐦 Media Url : '+result }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { image: { url: result }, caption: '⛷ Media Url : '+result }, { quoted: m })
             }
             break
 case 'webtonsearch': case 'webtoon':
@@ -2303,7 +2299,7 @@ case 'lava': case 'rock': case 'bloodglas': case 'hallowen': case 'darkgold': ca
                     var but = [
 				{
 					"urlButton": {
-						"displayText": "YouTube📍",
+						"displayText": "📺Utube📺",
 						"url": `${myweb}`
 						}
 					}
@@ -2327,7 +2323,7 @@ case 'lava': case 'rock': case 'bloodglas': case 'hallowen': case 'darkgold': ca
                     var but = [
 				{
 					"urlButton": {
-						"displayText": "YouTube📍",
+						"displayText": "📺Utube📺",
 						"url": `${myweb}`
 						}
 					}
@@ -2390,7 +2386,7 @@ break
                 ]
                 let buttonMessage = {
                     image: { url: result.image[0] },
-                    caption: `🐦 Title : ${result.title}\n🐦 Category : ${result.type}\n🐦 Detail : ${result.source}\n🐦 Media Url : ${result.image[2] || result.image[1] || result.image[0]}`,
+                    caption: `⛷ Title : ${result.title}\n⛷ Category : ${result.type}\n⛷ Detail : ${result.source}\n⛷ Media Url : ${result.image[2] || result.image[1] || result.image[0]}`,
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2408,7 +2404,7 @@ break
                 ]
                 let buttonMessage = {
                     image: { url: result.image },
-                    caption: `🐦 Title : ${result.title}\n🐦 Source : ${result.source}\n🐦 Media Url : ${result.image}`,
+                    caption: `⛷ Title : ${result.title}\n⛷ Source : ${result.source}\n⛷ Media Url : ${result.image}`,
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2456,14 +2452,14 @@ break
                 if (!Number(text)) return reply(`Example : ${prefix + command} 916909137213`)
                 let anu = await primbon.nomer_hoki(Number(text))
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Phone Number :* ${anu.message.nomer_hp}\n🐦 *Shuzi Angka Figures :* ${anu.message.angka_shuzi}\n🐦 *Positive Energy :*\n- Riches : ${anu.message.energi_positif.kekayaan}\n- Health : ${anu.message.energi_positif.kesehatan}\n- Love : ${anu.message.energi_positif.cinta}\n- Stability : ${anu.message.energi_positif.kestabilan}\n- Percentage : ${anu.message.energi_positif.persentase}\n🐦 *Negative Energy :*\n- Dispute : ${anu.message.energi_negatif.perselisihan}\n- Lost : ${anu.message.energi_negatif.kehilangan}\n- Catastrophe : ${anu.message.energi_negatif.malapetaka}\n- Destruction : ${anu.message.energi_negatif.kehancuran}\n- Percentage : ${anu.message.energi_negatif.persentase}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Phone Number :* ${anu.message.nomer_hp}\n⛷ *Shuzi Angka Figures :* ${anu.message.angka_shuzi}\n⛷ *Positive Energy :*\n- Riches : ${anu.message.energi_positif.kekayaan}\n- Health : ${anu.message.energi_positif.kesehatan}\n- Love : ${anu.message.energi_positif.cinta}\n- Stability : ${anu.message.energi_positif.kestabilan}\n- Percentage : ${anu.message.energi_positif.persentase}\n⛷ *Negative Energy :*\n- Dispute : ${anu.message.energi_negatif.perselisihan}\n- Lost : ${anu.message.energi_negatif.kehilangan}\n- Catastrophe : ${anu.message.energi_negatif.malapetaka}\n- Destruction : ${anu.message.energi_negatif.kehancuran}\n- Percentage : ${anu.message.energi_negatif.persentase}`, m)
             }
             break
             case 'artimimpi': case 'tafsirmimpi': {
                 if (!text) return reply(`Example : ${prefix + command} belanja`)
                 let anu = await primbon.tafsir_mimpi(text)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Dream :* ${anu.message.mimpi}\n🐦 *Meaning :* ${anu.message.arti}\n🐦 *Solution :* ${anu.message.solusi}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Dream :* ${anu.message.mimpi}\n⛷ *Meaning :* ${anu.message.arti}\n⛷ *Solution :* ${anu.message.solusi}`, m)
             }
             break
             case 'ramalanjodoh': case 'ramaljodoh': {
@@ -2471,7 +2467,7 @@ break
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_jodoh(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Your Name :* ${anu.message.nama_anda.nama}\n🐦 *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n🐦 *Couple Name :* ${anu.message.nama_pasangan.nama}\n🐦 *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n🐦 *Results :* ${anu.message.result}\n🐦 *Notes :* ${anu.message.catatan}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Your Name :* ${anu.message.nama_anda.nama}\n⛷ *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n⛷ *Couple Name :* ${anu.message.nama_pasangan.nama}\n⛷ *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n⛷ *Results :* ${anu.message.result}\n⛷ *Notes :* ${anu.message.catatan}`, m)
             }
             break
             case 'ramalanjodohbali': case 'ramaljodohbali': {
@@ -2479,7 +2475,7 @@ break
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_jodoh_bali(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Your Name :* ${anu.message.nama_anda.nama}\n🐦 *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n🐦 *Couple Name :* ${anu.message.nama_pasangan.nama}\n🐦 *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n🐦 *Results :* ${anu.message.result}\n🐦 *Notes :* ${anu.message.catatan}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Your Name :* ${anu.message.nama_anda.nama}\n⛷ *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n⛷ *Couple Name :* ${anu.message.nama_pasangan.nama}\n⛷ *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n⛷ *Results :* ${anu.message.result}\n⛷ *Notes :* ${anu.message.catatan}`, m)
             }
             break
             case 'suamiistri': {
@@ -2487,7 +2483,7 @@ break
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.suami_istri(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Husband's Name :* ${anu.message.suami.nama}\n🐦 *Husband Born :* ${anu.message.suami.tgl_lahir}\n🐦 *Wife's Name :* ${anu.message.istri.nama}\n🐦 *Born Wife :* ${anu.message.istri.tgl_lahir}\n🐦 *Results :* ${anu.message.result}\n🐦 *Notes :* ${anu.message.catatan}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Husband's Name :* ${anu.message.suami.nama}\n⛷ *Husband Born :* ${anu.message.suami.tgl_lahir}\n⛷ *Wife's Name :* ${anu.message.istri.nama}\n⛷ *Born Wife :* ${anu.message.istri.tgl_lahir}\n⛷ *Results :* ${anu.message.result}\n⛷ *Notes :* ${anu.message.catatan}`, m)
             }
             break
             case 'ramalancinta': case 'ramalcinta': {
@@ -2495,14 +2491,14 @@ break
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_cinta(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Your Name :* ${anu.message.nama_anda.nama}\n🐦 *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n🐦 *Couple Name :* ${anu.message.nama_pasangan.nama}\n🐦 *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n🐦 *Positive Side :* ${anu.message.sisi_positif}\n🐦 *Negative Side :* ${anu.message.sisi_negatif}\n🐦 *Notes :* ${anu.message.catatan}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Your Name :* ${anu.message.nama_anda.nama}\n⛷ *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n⛷ *Couple Name :* ${anu.message.nama_pasangan.nama}\n⛷ *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n⛷ *Positive Side :* ${anu.message.sisi_positif}\n⛷ *Negative Side :* ${anu.message.sisi_negatif}\n⛷ *Notes :* ${anu.message.catatan}`, m)
             }
             break
             case 'artinama': {
                 if (!text) throw `Example : ${prefix + command} Dika Ardianta`
                 let anu = await primbon.arti_nama(text)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Name :* ${anu.message.nama}\n🐦 *Meaning :* ${anu.message.arti}\n🐦 *Notes :* ${anu.message.catatan}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Name :* ${anu.message.nama}\n⛷ *Meaning :* ${anu.message.arti}\n⛷ *Notes :* ${anu.message.catatan}`, m)
             }
             break
             case 'kecocokannama': case 'cocoknama': {
@@ -2510,7 +2506,7 @@ break
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.kecocokan_nama(nama, tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Name :* ${anu.message.nama}\n🐦 *Born :* ${anu.message.tgl_lahir}\n🐦 *Life Path :* ${anu.message.life_path}\n🐦 *Destiny :* ${anu.message.destiny}\n🐦 *Destiny Desire :* ${anu.message.destiny_desire}\n🐦 *Personality :* ${anu.message.personality}\n🐦 *Percentage :* ${anu.message.persentase_kecocokan}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Name :* ${anu.message.nama}\n⛷ *Born :* ${anu.message.tgl_lahir}\n⛷ *Life Path :* ${anu.message.life_path}\n⛷ *Destiny :* ${anu.message.destiny}\n⛷ *Destiny Desire :* ${anu.message.destiny_desire}\n⛷ *Personality :* ${anu.message.personality}\n⛷ *Percentage :* ${anu.message.persentase_kecocokan}`, m)
             }
             break
             case 'kecocokanpasangan': case 'cocokpasangan': case 'pasangan': {
@@ -2518,7 +2514,7 @@ break
                 let [nama1, nama2] = text.split`|`
                 let anu = await primbon.kecocokan_nama_pasangan(nama1, nama2)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendImage(m.chat,  anu.message.gambar, `🐦 *Your Name :* ${anu.message.nama_anda}\n🐦 *Couple Name :* ${anu.message.nama_pasangan}\n🐦 *Positive Side :* ${anu.message.sisi_positif}\n🐦 *Negative Side :* ${anu.message.sisi_negatif}`, m)
+                GojoMdNx.sendImage(m.chat,  anu.message.gambar, `⛷ *Your Name :* ${anu.message.nama_anda}\n⛷ *Couple Name :* ${anu.message.nama_pasangan}\n⛷ *Positive Side :* ${anu.message.sisi_positif}\n⛷ *Negative Side :* ${anu.message.sisi_negatif}`, m)
             }
             break
             case 'jadianpernikahan': case 'jadiannikah': {
@@ -2526,7 +2522,7 @@ break
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.tanggal_jadian_pernikahan(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Wedding Date :* ${anu.message.tanggal}\n🐦 *Characteristics :* ${anu.message.karakteristik}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Wedding Date :* ${anu.message.tanggal}\n⛷ *Characteristics :* ${anu.message.karakteristik}`, m)
             }
             break
             case 'sifatusaha': {
@@ -2534,7 +2530,7 @@ break
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.sifat_usaha_bisnis(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Born :* ${anu.message.hari_lahir}\n🐦 *Business :* ${anu.message.usaha}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Born :* ${anu.message.hari_lahir}\n⛷ *Business :* ${anu.message.usaha}`, m)
             }
             break
             case 'rejeki': case 'rezeki': {
@@ -2542,7 +2538,7 @@ break
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.rejeki_hoki_weton(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Born :* ${anu.message.hari_lahir}\n🐦 *Sustenance :* ${anu.message.rejeki}\n🐦 *Notes :* ${anu.message.catatan}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Born :* ${anu.message.hari_lahir}\n⛷ *Sustenance :* ${anu.message.rejeki}\n⛷ *Notes :* ${anu.message.catatan}`, m)
             }
             break
             case 'pekerjaan': case 'kerja': {
@@ -2550,7 +2546,7 @@ break
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.pekerjaan_weton_lahir(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Born :* ${anu.message.hari_lahir}\n🐦 *Profession :* ${anu.message.pekerjaan}\n🐦 *Notes :* ${anu.message.catatan}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Born :* ${anu.message.hari_lahir}\n⛷ *Profession :* ${anu.message.pekerjaan}\n⛷ *Notes :* ${anu.message.catatan}`, m)
             }
             break
             case 'ramalannasib': case 'ramalnasib': case 'nasib': {
@@ -2558,7 +2554,7 @@ break
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.ramalan_nasib(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Analysis :* ${anu.message.analisa}\n🐦 *Root Number :* ${anu.message.angka_akar}\n🐦 *Nature :* ${anu.message.sifat}\n🐦 *Element :* ${anu.message.elemen}\n🐦 *Lucky Numbers :* ${anu.message.angka_keberuntungan}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Analysis :* ${anu.message.analisa}\n⛷ *Root Number :* ${anu.message.angka_akar}\n⛷ *Nature :* ${anu.message.sifat}\n⛷ *Element :* ${anu.message.elemen}\n⛷ *Lucky Numbers :* ${anu.message.angka_keberuntungan}`, m)
             }
             break
             case 'potensipenyakit': case 'penyakit': {
@@ -2566,7 +2562,7 @@ break
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.cek_potensi_penyakit(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Analysis :* ${anu.message.analisa}\n🐦 *Sector :* ${anu.message.sektor}\n?? *Element :* ${anu.message.elemen}\n🐦 *Notes :* ${anu.message.catatan}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Analysis :* ${anu.message.analisa}\n⛷ *Sector :* ${anu.message.sektor}\n?? *Element :* ${anu.message.elemen}\n⛷ *Notes :* ${anu.message.catatan}`, m)
             }
             break
             case 'artitarot': case 'tarot': {
@@ -2574,7 +2570,7 @@ break
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.arti_kartu_tarot(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendImage(m.chat, anu.message.image, `🐦 *Born :* ${anu.message.tgl_lahir}\n🐦 *Tarot Symbol :* ${anu.message.simbol_tarot}\n🐦 *Meaning :* ${anu.message.arti}\n🐦 *Notes :* ${anu.message.catatan}`, m)
+                GojoMdNx.sendImage(m.chat, anu.message.image, `⛷ *Born :* ${anu.message.tgl_lahir}\n⛷ *Tarot Symbol :* ${anu.message.simbol_tarot}\n⛷ *Meaning :* ${anu.message.arti}\n⛷ *Notes :* ${anu.message.catatan}`, m)
             }
             break
             case 'fengshui': {
@@ -2582,7 +2578,7 @@ break
                 let [nama, gender, tahun] = text.split`,`
                 let anu = await primbon.perhitungan_feng_shui(nama, gender, tahun)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Name :* ${anu.message.nama}\n🐦 *Born :* ${anu.message.tahun_lahir}\n🐦 *Gender :* ${anu.message.jenis_kelamin}\n🐦 *Kua Number :* ${anu.message.angka_kua}\n🐦 *Group :* ${anu.message.kelompok}\n🐦 *Character :* ${anu.message.karakter}\n🐦 *Good Sector :* ${anu.message.sektor_baik}\n🐦 *Bad Sector :* ${anu.message.sektor_buruk}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Name :* ${anu.message.nama}\n⛷ *Born :* ${anu.message.tahun_lahir}\n⛷ *Gender :* ${anu.message.jenis_kelamin}\n⛷ *Kua Number :* ${anu.message.angka_kua}\n⛷ *Group :* ${anu.message.kelompok}\n⛷ *Character :* ${anu.message.karakter}\n⛷ *Good Sector :* ${anu.message.sektor_baik}\n⛷ *Bad Sector :* ${anu.message.sektor_buruk}`, m)
             }
             break
             case 'haribaik': {
@@ -2590,7 +2586,7 @@ break
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.petung_hari_baik(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Born :* ${anu.message.tgl_lahir}\n🐦 *When Challenged :* ${anu.message.kala_tinantang}\n🐦 *Info :* ${anu.message.info}\n🐦 *Notes :* ${anu.message.catatan}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Born :* ${anu.message.tgl_lahir}\n⛷ *When Challenged :* ${anu.message.kala_tinantang}\n⛷ *Info :* ${anu.message.info}\n⛷ *Notes :* ${anu.message.catatan}`, m)
             }
             break
             case 'harisangar': case 'taliwangke': {
@@ -2598,7 +2594,7 @@ break
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.hari_sangar_taliwangke(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Born :* ${anu.message.tgl_lahir}\n🐦 *Results :* ${anu.message.result}\n🐦 *Info :* ${anu.message.info}\n🐦 *Notes :* ${anu.message.catatan}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Born :* ${anu.message.tgl_lahir}\n⛷ *Results :* ${anu.message.result}\n⛷ *Info :* ${anu.message.info}\n⛷ *Notes :* ${anu.message.catatan}`, m)
             }
             break
             case 'harinaas': case 'harisial': {
@@ -2606,7 +2602,7 @@ break
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.primbon_hari_naas(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Day Of Birth :* ${anu.message.hari_lahir}\n🐦 *Date Of Birth :* ${anu.message.tgl_lahir}\n🐦 *Fateful Day :* ${anu.message.hari_naas}\n🐦 *Info :* ${anu.message.catatan}\n🐦 *Notes :* ${anu.message.info}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Day Of Birth :* ${anu.message.hari_lahir}\n⛷ *Date Of Birth :* ${anu.message.tgl_lahir}\n⛷ *Fateful Day :* ${anu.message.hari_naas}\n⛷ *Info :* ${anu.message.catatan}\n⛷ *Notes :* ${anu.message.info}`, m)
             }
             break
             case 'nagahari': case 'harinaga': {
@@ -2614,7 +2610,7 @@ break
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.rahasia_naga_hari(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Day Of Birth :* ${anu.message.hari_lahir}\n🐦 *Date Of Birth :* ${anu.message.tgl_lahir}\n🐦 *Dragon Day Direction :* ${anu.message.arah_naga_hari}\n🐦 *Notes :* ${anu.message.catatan}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Day Of Birth :* ${anu.message.hari_lahir}\n⛷ *Date Of Birth :* ${anu.message.tgl_lahir}\n⛷ *Dragon Day Direction :* ${anu.message.arah_naga_hari}\n⛷ *Notes :* ${anu.message.catatan}`, m)
             }
             break
             case 'arahrejeki': case 'arahrezeki': {
@@ -2622,7 +2618,7 @@ break
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.primbon_arah_rejeki(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Day Of Birth :* ${anu.message.hari_lahir}\n🐦 *Date Of Birth :* ${anu.message.tgl_lahir}\n🐦 *Sustenance Direction :* ${anu.message.arah_rejeki}\n🐦 *Notes :* ${anu.message.catatan}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Day Of Birth :* ${anu.message.hari_lahir}\n⛷ *Date Of Birth :* ${anu.message.tgl_lahir}\n⛷ *Sustenance Direction :* ${anu.message.arah_rejeki}\n⛷ *Notes :* ${anu.message.catatan}`, m)
             }
             break
             case 'peruntungan': {
@@ -2630,7 +2626,7 @@ break
                 let [nama, tgl, bln, thn, untuk] = text.split`,`
                 let anu = await primbon.ramalan_peruntungan(nama, tgl, bln, thn, untuk)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Name :* ${anu.message.nama}\n🐦 *Born :* ${anu.message.tgl_lahir}\n🐦 *Fortune Of The Year :* ${anu.message.peruntungan_tahun}\n🐦 *Results :* ${anu.message.result}\n🐦 *Notes :* ${anu.message.catatan}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Name :* ${anu.message.nama}\n⛷ *Born :* ${anu.message.tgl_lahir}\n⛷ *Fortune Of The Year :* ${anu.message.peruntungan_tahun}\n⛷ *Results :* ${anu.message.result}\n⛷ *Notes :* ${anu.message.catatan}`, m)
             }
             break
             case 'weton': case 'wetonjawa': {
@@ -2638,7 +2634,7 @@ break
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.weton_jawa(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Date :* ${anu.message.tanggal}\n🐦 *Number Of Neptune :* ${anu.message.jumlah_neptu}\n🐦 *Day Character :* ${anu.message.watak_hari}\n🐦 *Dragon Day :* ${anu.message.naga_hari}\n🐦 *Good Hour :* ${anu.message.jam_baik}\n🐦 *Birth Character :* ${anu.message.watak_kelahiran}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Date :* ${anu.message.tanggal}\n⛷ *Number Of Neptune :* ${anu.message.jumlah_neptu}\n⛷ *Day Character :* ${anu.message.watak_hari}\n⛷ *Dragon Day :* ${anu.message.naga_hari}\n⛷ *Good Hour :* ${anu.message.jam_baik}\n⛷ *Birth Character :* ${anu.message.watak_kelahiran}`, m)
             }
             break
             case 'sifat': case 'karakter': {
@@ -2646,7 +2642,7 @@ break
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.sifat_karakter_tanggal_lahir(nama, tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Name :* ${anu.message.nama}\n🐦 *Born :* ${anu.message.tgl_lahir}\n🐦 *Lifeline :* ${anu.message.garis_hidup}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Name :* ${anu.message.nama}\n⛷ *Born :* ${anu.message.tgl_lahir}\n⛷ *Lifeline :* ${anu.message.garis_hidup}`, m)
             }
             break
             case 'keberuntungan': {
@@ -2654,7 +2650,7 @@ break
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.potensi_keberuntungan(nama, tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Name :* ${anu.message.nama}\n🐦 *Born :* ${anu.message.tgl_lahir}\n🐦 *Results :* ${anu.message.result}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Name :* ${anu.message.nama}\n⛷ *Born :* ${anu.message.tgl_lahir}\n⛷ *Results :* ${anu.message.result}`, m)
             }
             break
             case 'memancing': {
@@ -2662,7 +2658,7 @@ break
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.primbon_memancing_ikan(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Date :* ${anu.message.tgl_memancing}\n🐦 *Results :* ${anu.message.result}\n🐦 *Notes :* ${anu.message.catatan}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Date :* ${anu.message.tgl_memancing}\n⛷ *Results :* ${anu.message.result}\n⛷ *Notes :* ${anu.message.catatan}`, m)
             }
             break
             case 'masasubur': {
@@ -2670,7 +2666,7 @@ break
                 let [tgl, bln, thn, siklus] = text.split`,`
                 let anu = await primbon.masa_subur(tgl, bln, thn, siklus)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Results :* ${anu.message.result}\n🐦 *Notes :* ${anu.message.catatan}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Results :* ${anu.message.result}\n⛷ *Notes :* ${anu.message.catatan}`, m)
             }
             break
             case 'zodiak': case 'zodiac': {
@@ -2705,14 +2701,14 @@ break
                 
                 let anu = await primbon.zodiak(zodiac)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Zodiac :* ${anu.message.zodiak}\n🐦 *Number :* ${anu.message.nomor_keberuntungan}\n🐦 *Aroma :* ${anu.message.aroma_keberuntungan}\n🐦 *Planet :* ${anu.message.planet_yang_mengitari}\n🐦 *Flower :* ${anu.message.bunga_keberuntungan}\n🐦 *Color :* ${anu.message.warna_keberuntungan}\n🐦 *Stone :* ${anu.message.batu_keberuntungan}\n🐦 *Element :* ${anu.message.elemen_keberuntungan}\n🐦 *Zodiac Couple :* ${anu.message.pasangan_zodiak}\n🐦 *Notes :* ${anu.message.catatan}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Zodiac :* ${anu.message.zodiak}\n⛷ *Number :* ${anu.message.nomor_keberuntungan}\n⛷ *Aroma :* ${anu.message.aroma_keberuntungan}\n⛷ *Planet :* ${anu.message.planet_yang_mengitari}\n⛷ *Flower :* ${anu.message.bunga_keberuntungan}\n⛷ *Color :* ${anu.message.warna_keberuntungan}\n⛷ *Stone :* ${anu.message.batu_keberuntungan}\n⛷ *Element :* ${anu.message.elemen_keberuntungan}\n⛷ *Zodiac Couple :* ${anu.message.pasangan_zodiak}\n⛷ *Notes :* ${anu.message.catatan}`, m)
             }
             break
             case 'shio': {
                 if (!text) throw `Example : ${prefix + command} tikus\n\nNote : For Detail https://primbon.com/shio.htm`
                 let anu = await primbon.shio(text)
                 if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Results :* ${anu.message}`, m)
+                GojoMdNx.sendText(m.chat, `⛷ *Results :* ${anu.message}`, m)
             }
             break
 	    case 'stalker': case 'stalk': {
@@ -2754,13 +2750,13 @@ break
                     if (!id) return reply(`No Query username, Example : ${prefix + command} ig josephxeon13`)
                     let { result: anu } = await fetchJson(api('zenz', '/api/stalker/ig', { username: id }, 'apikey'))
                     if (anu.status == false) return reply(anu.result.message)
-                    GojoMdNx.sendMedia(m.chat, anu.caption.profile_hd, '', `🐦 Full Name : ${anu.caption.full_name}\n🐦 User Name : ${anu.caption.user_name}\n🐦 ID ${anu.caption.user_id}\n🐦 Following : ${anu.caption.followers}\n🐦 Followers : ${anu.caption.following}\n🐦 Bussines : ${anu.caption.bussines}\n🐦 Professional : ${anu.caption.profesional}\n🐦 Verified : ${anu.caption.verified}\n🐦 Private : ${anu.caption.private}\n🐦 Bio : ${anu.caption.biography}\n🐦 Bio Url : ${anu.caption.bio_url}`, m)
+                    GojoMdNx.sendMedia(m.chat, anu.caption.profile_hd, '', `⛷ Full Name : ${anu.caption.full_name}\n⛷ User Name : ${anu.caption.user_name}\n⛷ ID ${anu.caption.user_id}\n⛷ Following : ${anu.caption.followers}\n⛷ Followers : ${anu.caption.following}\n⛷ Bussines : ${anu.caption.bussines}\n⛷ Professional : ${anu.caption.profesional}\n⛷ Verified : ${anu.caption.verified}\n⛷ Private : ${anu.caption.private}\n⛷ Bio : ${anu.caption.biography}\n⛷ Bio Url : ${anu.caption.bio_url}`, m)
 		    db.data.users[m.sender].limit -= 1
                 } else if (type.toLowerCase() == 'npm') {
                     if (!id) return reply(`No Query username, Example : ${prefix + command} npm scrape-primbon`)
                     let { result: anu } = await fetchJson(api('zenz', '/api/stalker/npm', { query: id }, 'apikey'))
                     if (anu.status == false) return reply(anu.result.message)
-                    reply(`🐦 Name : ${anu.name}\n🐦 Version : ${Object.keys(anu.versions)}\n🐦 Created : ${tanggal(anu.time.created)}\n🐦 Modified : ${tanggal(anu.time.modified)}\n🐦 Maintainers :\n ${anu.maintainers.map(v => `- ${v.name} : ${v.email}`).join('\n')}\n\n🐦 Description : ${anu.description}\n🐦 Homepage : ${anu.homepage}\n🐦 Keywords : ${anu.keywords}\n🐦 Author : ${anu.author.name}\n🐦 License : ${anu.license}\n🐦 Readme : ${anu.readme}`)
+                    reply(`⛷ Name : ${anu.name}\n⛷ Version : ${Object.keys(anu.versions)}\n⛷ Created : ${tanggal(anu.time.created)}\n⛷ Modified : ${tanggal(anu.time.modified)}\n⛷ Maintainers :\n ${anu.maintainers.map(v => `- ${v.name} : ${v.email}`).join('\n')}\n\n⛷ Description : ${anu.description}\n⛷ Homepage : ${anu.homepage}\n⛷ Keywords : ${anu.keywords}\n⛷ Author : ${anu.author.name}\n⛷ License : ${anu.license}\n⛷ Readme : ${anu.readme}`)
 		    db.data.users[m.sender].limit -= 1
                 } else {
                     reply(`Example : ${prefix +command} type id\n\nList Type :\n1. ff (Free Fire)\n2. ml (Mobile Legends)\n3. aov (Arena Of Valor)\n4. cod (Call Of Duty)\n5. pb (point Blank)\n6. ig (Instagram)\n7. npm (https://npmjs.com)`)
@@ -2846,7 +2842,7 @@ break
                 if (!text) return reply(`No Query Title`)
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/joox', { query: text }, 'apikey'))
-                let msg = await GojoMdNx.sendImage(m.chat, anu.result.img, `🐦 Title : ${anu.result.lagu}\n🐦 Album : ${anu.result.album}\n🐦 Singer : ${anu.result.penyanyi}\n🐦 Publish : ${anu.result.publish}\n🐦 Lyrics :\n${anu.result.lirik.result}`, m)
+                let msg = await GojoMdNx.sendImage(m.chat, anu.result.img, `⛷ Title : ${anu.result.lagu}\n⛷ Album : ${anu.result.album}\n⛷ Singer : ${anu.result.penyanyi}\n⛷ Publish : ${anu.result.publish}\n⛷ Lyrics :\n${anu.result.lirik.result}`, m)
                 GojoMdNx.sendMessage(m.chat, { audio: { url: anu.result.mp4aLink }, mimetype: 'audio/mpeg', fileName: anu.result.lagu+'.m4a' }, { quoted: msg })
             }
             break
@@ -2854,7 +2850,7 @@ break
                 if (!text) return reply(`No Query Title`)
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/soundcloud', { url: isUrl(text)[0] }, 'apikey'))
-                let msg = await GojoMdNx.sendImage(m.chat, anu.result.thumb, `🐦 Title : ${anu.result.title}\n🐦 Url : ${isUrl(text)[0]}`)
+                let msg = await GojoMdNx.sendImage(m.chat, anu.result.thumb, `⛷ Title : ${anu.result.title}\n⛷ Url : ${isUrl(text)[0]}`)
                 GojoMdNx.sendMessage(m.chat, { audio: { url: anu.result.url }, mimetype: 'audio/mpeg', fileName: anu.result.title+'.m4a' }, { quoted: msg })
             }
             break
@@ -2897,7 +2893,7 @@ break
                 if (!text) return reply(`Enter Query Link!`)
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/api/downloader/facebook', { url: text }, 'apikey'))
-                GojoMdNx.sendMessage(m.chat, { video: { url: anu.result.url }, caption: `🐦 Title : ${anu.result.title}`}, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { video: { url: anu.result.url }, caption: `⛷ Title : ${anu.result.title}`}, { quoted: m })
             }
             break
 	        case 'pindl': case 'pinterestdl': {
@@ -2919,11 +2915,11 @@ break
 		    let buttonMessage = {
 		        image: { url: anu.author.profilePic },
 			caption: `
-🐦 Title : ${anu.title}
-🐦 Author : ${anu.author.name}
-🐦 Like : ${anu.like}
-🐦 Caption : ${anu.caption}
-🐦 Url : ${anu.media[0]}
+⛷ Title : ${anu.title}
+⛷ Author : ${anu.author.name}
+⛷ Like : ${anu.like}
+⛷ Caption : ${anu.caption}
+⛷ Url : ${anu.media[0]}
 To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp4 Command With The Url Above
 `,
 			footer: GojoMdNx.user.name,
@@ -2933,7 +2929,7 @@ To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp
 		    GojoMdNx.sendMessage(m.chat, buttonMessage, { quoted: m })
 		} else if (anu.type == 'image') {
 		    anu.media.map(async (url) => {
-		        GojoMdNx.sendMessage(m.chat, { image: { url }, caption: `🐦 Title : ${anu.title}\n🐦 Author : ${anu.author.name}\n🐦 Like : ${anu.like}\n🐦 Caption : ${anu.caption}` }, { quoted: m })
+		        GojoMdNx.sendMessage(m.chat, { image: { url }, caption: `⛷ Title : ${anu.title}\n⛷ Author : ${anu.author.name}\n⛷ Like : ${anu.like}\n⛷ Caption : ${anu.caption}` }, { quoted: m })
 		    })
 		}
 	    }
@@ -3304,10 +3300,10 @@ View List Of Messages With ${prefix}listmsg`)
                 respon = `
 Response Speed ${latensi.toFixed(4)} _Second_ \n ${oldd - neww} _miliseconds_\n\nRuntime : ${runtime(process.uptime())}
 
-💻 Info Server
+🖥 *Server info* 🖥
 RAM: ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
 
-_NodeJS Memory Usaage_
+_ 🔃NodeJS Memory Usaage🔃 _
 ${Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v=>v.length)),' ')}: ${formatp(used[key])}`).join('\n')}
 
 ${cpus[0] ? `_Total CPU Usage_
@@ -3368,7 +3364,7 @@ reply("Success Changing Menu To "+q)
 break
                     case 'bug': case 'report': {
                     	if(!text) return reply(`Enter The Bug\n\nExample: ${command} Menu Error`)
-                    	GojoMdNx.sendMessage(`918129624395@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
+                    	GojoMdNx.sendMessage(`254792893310@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
 Report Message: ${text}` })
 reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This, Use This Feature Again And Again For No Reason, You Will Be Blocked For Sure !`)
                     }
@@ -3383,47 +3379,43 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./GojoMedia/gojo.jpg')},
-                            hydratedFooterText: `┌─❖
-│「 Hi 👋 」
-└┬❖ 「 ${pushname} 」
-┌┤✑  Shashi burina thaicho🎉
-││✑  🐦🖐️!!
-│└───────────────┈ ⳹
-│ 「 BOT INFO 」
-│✙ 𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
-│✙ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│✙ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
-│✙ 𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownername}
-│✙ 𝗢𝘄𝗻𝗲𝗿 𝗡𝘂𝗺𝗯𝗲𝗿 : ${global.owner}
-│✙ 𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
-│✙ 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-│✙ 𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
-└┬──────────────┈ ⳹
-   │✑  Please Select The Button Below
-   └───────────────┈ ⳹`,
+                            hydratedFooterText: `┌─🇰🇪
+│「 OYAAAAH👿👿 Bot is Alive & Functioning」
+└┬🇰🇪 「 ${pushname} 」
+┌┤⛨⚩  *COMRADES!! CHOICE* 🤗🤩
+││⛨⚩  ⛷🖐️!!
+│└───────────────┈ ⛨ⒼⒷⓈ⛨
+│ 「 ⛨ʙᴏᴛ ɪɴғᴏ⛨」
+│☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
+│🤗 *ʙᴏᴛ ɴᴀᴍᴇ* : ${global.botname}
+│🤩 *ᴏᴡɴᴇʀ* : ${global.ownername}
+│👯 *ᴛᴏᴛᴀʟ ᴜsᴇʀs* : ${Object.keys(global.db.data.users).length}
+└┬──────────────┈ ⛨ⒼⒷⓈ⛨
+   │⛨⚩  Please Select The Button Below
+   └───────────────┈ ⛨ⒼⒷⓈ⛨`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'YouTube📍',
+                                    displayText: '📺Utube📺',
                                     url: `${myweb}`
                                 }
                             }, {
                             	urlButton: {
-                                displayText: 'Script🔖',
+                                displayText: '🖋Source',
                                     url: `${sc}`
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '🍇All Menu🍇',
+                                    displayText: '🪙Commands🪙',
                                     id: `${prefix}allmenu`
                                 }
                                 }, {
                                 quickReplyButton: {
-                                    displayText: '🍒List Menu🍒',
+                                    displayText: '📁Menu List📁',
                                     id: `${prefix}command`
                                 }
                                 }, {
                                 quickReplyButton: {
-                                    displayText: '👤Owner👤',
+                                    displayText: '😈Creator👿',
                                     id: `${prefix}owner`
                                 }
                             }]
@@ -3444,46 +3436,42 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./GojoMedia/gojo.jpg')}, 
                             hydratedFooterText: `
-┌─❖
-│「 Hi 👋 」
-└┬❖ 「 ${pushname} 」
-┌┤✑  Daijobka sempai?😄
-│└───────────────┈ ⳹
-│ 「 BOT INFO 」
-│✙ 𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
-│✙ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│✙ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
-│✙ 𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownername}
-│✙ 𝗢𝘄𝗻𝗲𝗿 𝗡𝘂𝗺𝗯𝗲𝗿 : ${global.owner}
-│✙ 𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
-│✙ 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-│✙ 𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
-└┬──────────────┈ ⳹
-   │✑  Please Select The Button Below
-   └───────────────┈ ⳹`,
+┌─🇰🇪
+│「 Hello, You Have Requested to view my menu🥺🤭」
+└┬🇰🇪 「 ${pushname} 」
+┌┤⛨⚩  Mambo Vipi?😋
+│└───────────────┈ ⛨ⒼⒷⓈ⛨
+│ 「 ⛨ʙᴏᴛ ɪɴғᴏ⛨」
+│☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
+│🤗 *ʙᴏᴛ ɴᴀᴍᴇ* : ${global.botname}
+│🤩 *ᴏᴡɴᴇʀ* : ${global.ownername}
+│👯 *ᴛᴏᴛᴀʟ ᴜsᴇʀs* : ${Object.keys(global.db.data.users).length}
+└┬──────────────┈ ⛨ⒼⒷⓈ⛨
+   │⛨⚩  Please Select The Button Below
+   └───────────────┈ ⛨ⒼⒷⓈ⛨`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'YouTube📍',
+                                    displayText: '📺Utube📺',
                                     url: `${myweb}`
                                 }
                             }, {
                             	urlButton: {
-                                displayText: 'Script🔖',
+                                displayText: '🖋Source',
                                     url: `${sc}`
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'All Menu🎉',
+                                    displayText: '🪙Commands🪙🎉',
                                     id: `${prefix}allmenu`
                                 }
                                 }, {
                                 quickReplyButton: {
-                                    displayText: 'List Menu⭐',
+                                    displayText: '📁Menu List📁',
                                     id: `${prefix}command`
                                 }
                                 }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner🐦',
+                                    displayText: '📩Chat Me📩',
                                     id: `${prefix}owner`
                                 }
                             }]
@@ -3512,10 +3500,10 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								]
 							},
 							{
-								"title": "Bot Features",
+								"title": "⛨ⒼⒷⓈ⛨",
 								"rows": [
 									{
-										"title": "All Menu",
+										"title": "🪙Commands🪙",
 										"description": "Displays The List Of All The Features!",
 										"rowId": `${prefix}allmenu`
 									},
@@ -3619,243 +3607,243 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             }
             break
     case 'donasi': case 'donate': case 'sewabot': case 'sewa': {
-                GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c15f725add0381fb69c4b.jpg' }, caption: `*Hi Bro ${m.pushName}*\nDonation section is currently down🥲 , I know you are happy but me 🥲💔\n` }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/97ad903ba5a233f75a751.jpg' }, caption: `*Hi Bro ${m.pushName}*\nYou can tip me via , MPESA: 0792893310💔\n` }, { quoted: m })
             }
             break
             case 'sc': case 'script': {
-                reply(`GitHub : https://github.com/nexusNw/Gojo-Satoru\n Dont Forget To Give Star\n\nYouTube : ${myweb}\nDont Forget To Watch Tutorial`)
+                reply(`GitHub : https://github.com/GingerBreadSketchy\n Dont Forget To Give Star\n\nYouTube : ${myweb}\nDont Forget To Watch Tutorial`)
             }
             break
 case 'allmenu': {
   	anu = `
 ┏━「 *${botname}* 」━━⭓ 
-┃╔══☯︎「 MAIN 」☯︎
-┃╠ ${prefix}alive
-┃╠ ${prefix}script
-┃╠ ${prefix}speedtest
-┃╠ ${prefix}ping
-┃╠ ${prefix}owner
-┃╠ ${prefix}menu
-┃╠ ${prefix}delete
-┃╠ ${prefix}chatinfo
-┃╠ ${prefix}quoted
-┃╠ ${prefix}listpc
-┃╠ ${prefix}listgc
-┃╠ ${prefix}donate
-┃╠ ${prefix}report [bug]
-┃╠══✪「 OWNER 」 ☯︎
-┃╠ ${prefix}chat [option]
-┃╠ ${prefix}join [link]
-┃╠ ${prefix}leave
-┃╠ ${prefix}block [user]
-┃╠ ${prefix}unblock [user]
-┃╠ ${prefix}bcgroup [text]
-┃╠ ${prefix}bcall [text]
-┃╠ ${prefix}setppbot [image]
-┃╠ ${prefix}setexif
-┃╠══✪「 GROUP 」 ☯︎      
-┃╠${prefix}grouplink
-┃╠${prefix}ephemeral [option]
-┃╠${prefix}setgcpp [image]
-┃╠${prefix}setname [text]
-┃╠${prefix}setdesc [text]
-┃╠${prefix}group [text]
-┃╠${prefix}editinfo [option]
-┃╠${prefix}add [user]
-┃╠${prefix}kick [reply/tag]
-┃╠${prefix}hidetag [text]
-┃╠${prefix}tagall [text]
-┃╠${prefix}antilink [on/off]
-┃╠${prefix}mute [on/off]
-┃╠${prefix}promote [reply/tag]
-┃╠${prefix}demote [reply/tag]
-┃╠${prefix}vote
-┃╠${prefix}devote
-┃╠${prefix}upvote
-┃╠${prefix}checkvote
-┃╠${prefix}delvote
-┃╠══☯︎「 RPG 」 ☯︎
-┃╠${prefix}hunting
-┃╠${prefix}mining
-┃╠${prefix}heal
-┃╠${prefix}userlimit
-┃╠${prefix}profile
-┃╠${prefix}inventory
-┃╠${prefix}leaderboard
-┃╠${prefix}buy [option]
-┃╠${prefix}sell [option]
-┃╠═✪「 DOWNLOADER 」☯︎
-┃╠${prefix}ytmp3 [url|quality]
-┃╠${prefix}ytmp4 [url|quality]
-┃╠${prefix}getmusic [yt link]
-┃╠${prefix}getvideo [yt link]
-┃╠${prefix}umma [query]
-┃╠${prefix}joox [query]
-┃╠${prefix}soundcloud [url]
-┃╠══✪「 SEARCHER 」 ☯︎
-┃╠${prefix}play [query]
-┃╠${prefix}song [query]
-┃╠${prefix}yts [query]
-┃╠${prefix}google [query]
-┃╠${prefix}gimage [query]
-┃╠${prefix}pinterest [query]
-┃╠${prefix}wallpaper [query]
-┃╠${prefix}wikimedia [query]
-┃╠${prefix}ytsearch [query]
-┃╠${prefix}ringtone [query]
-┃╠${prefix}webtoon [query]
-┃╠══✪「 RANDOM 」☯︎
-┃╠${prefix}coffee
-┃╠${prefix}animequote (indo)
-┃╠${prefix}couplepp
-┃╠═✪「 RANDOM ANIME 」☯︎
-┃╠${prefix}loli
-┃╠${prefix}bully
-┃╠${prefix}cuddle
-┃╠${prefix}cry
-┃╠${prefix}hug
-┃╠${prefix}awoo
-┃╠${prefix}kiss
-┃╠${prefix}lick
-┃╠${prefix}pat
-┃╠${prefix}smug
-┃╠${prefix}bonk
-┃╠${prefix}yeet
-┃╠${prefix}blush
-┃╠${prefix}smile
-┃╠${prefix}wave
-┃╠${prefix}highfive
-┃╠${prefix}handhold
-┃╠${prefix}nom
-┃╠${prefix}glomp
-┃╠${prefix}bite
-┃╠${prefix}slap
-┃╠${prefix}kill
-┃╠${prefix}happy
-┃╠${prefix}wink
-┃╠${prefix}poke
-┃╠${prefix}dance
-┃╠${prefix}cringe
-┃╠══✪「 FUN 」 ☯︎
-┃╠ ${prefix}how [text
-┃╠ ${prefix}when [text]
-┃╠ ${prefix}is [text]
-┃╠ ${prefix}what [text]
-┃╠ ${prefix}can [text]
-┃╠ ${prefix}rate [text]
-┃╠ ${prefix}wangy [text]
-┃╠ ${prefix}beautifulcheck [tag]
-┃╠ ${prefix}awesomecheck [tag]
-┃╠ ${prefix}prettycheck [tag]
-┃╠ ${prefix}lesbiancheck [tag]
-┃╠ ${prefix}gaycheck [tag]
-┃╠ ${prefix}cutecheck [tag]
-┃╠ ${prefix}uglycheck [tag]
-┃╠ ${prefix}hornycheck [tag]
-┃╠ ${prefix}charactercheck [tag]
-┃╠ ${prefix}lovelycheck [tag]
-┃╠ ${prefix}couple
-┃╠ ${prefix}mysoulmate
-┃╠ ${prefix}hot
-┃╠ ${prefix}sexy
-┃╠ ${prefix}kind
-┃╠ ${prefix}idiot
-┃╠ ${prefix}handsome
-┃╠ ${prefix}beautiful
-┃╠ ${prefix}cute
-┃╠ ${prefix}pretty
-┃╠ ${prefix}lesbian
-┃╠ ${prefix}noob
-┃╠ ${prefix}bastard
-┃╠ ${prefix}foolish
-┃╠ ${prefix}nerd
-┃╠ ${prefix}asshole
-┃╠ ${prefix}gay
-┃╠ ${prefix}smart
-┃╠ ${prefix}stubble
-┃╠ ${prefix}dog
-┃╠ ${prefix}horny
-┃╠ ${prefix}cunt
-┃╠ ${prefix}wibu
-┃╠ ${prefix}tictactoe
-┃╠ ${prefix}delttt
-┃╠ ${prefix}guess [option]
-┃╠ ${prefix}math [mode]
-┃╠ ${prefix}suitpvp [tag]
-┃╠═══✪「 CONVERTER 」 ☯︎
-┃╠ ${prefix}toimage [reply stick]
-┃╠ ${prefix}sticker [reply img|gif]
-┃╠ ${prefix}emojimix [moji+moji]
-┃╠ ${prefix}tovideo [reply img]
-┃╠ ${prefix}togif [reply stick]
-┃╠ ${prefix}tourl [reply img]
-┃╠ ${prefix}tovn [reply aud]
-┃╠ ${prefix}tomp3 [reply vn]
-┃╠ ${prefix}toaudio [reply vid]
-┃╠ ${prefix}ebinary [reply txt]
-┃╠ ${prefix}dbinary [reply txt]
-┃╠ ${prefix}styletext [text]
-┃╠══✪「 DATABASE 」 ☯︎
-┃╠ ${prefix}setcmd
-┃╠ ${prefix}listcmd
-┃╠ ${prefix}delcmd
-┃╠ ${prefix}lockcmd
-┃╠ ${prefix}addmsg
-┃╠ ${prefix}listmsg
-┃╠ ${prefix}getmsg
-┃╠ ${prefix}delmsg
-┃╠═✪「 ANONYMOUS CHAT 」☯︎
-┃╠${prefix}anonymous
-┃╠${prefix}start
-┃╠${prefix}next
-┃╠${prefix}leave
-┃╠═✪「 VOICE CHANGER 」☯︎
-┃╠${prefix}bass [reply aud]
-┃╠${prefix}blown [reply aud]
-┃╠${prefix}deep [reply aud]
-┃╠${prefix}earrape [reply aud]
-┃╠${prefix}fast [reply aud]
-┃╠${prefix}fat [reply aud]
-┃╠${prefix}nightcore [reply aud]
-┃╠${prefix}reverse [reply aud]
-┃╠${prefix}robot [reply aud]
-┃╠${prefix}slow [reply aud]
-┃╠${prefix}squirrel [reply aud]
-┃╠══✪「 ISLAMIC 」☯︎
-┃╠${prefix}juzamma
-┃╠══✪「 HOROSCOPE 」☯︎
-┃╠${prefix}nomorhoki (indo)
-┃╠${prefix}artimimpi (indo)
-┃╠${prefix}artinama (indo)
-┃╠${prefix}ramaljodoh (indo)
-┃╠${prefix}ramaljodohbali (indo)
-┃╠${prefix}suamiistri (indo)
-┃╠${prefix}ramalcinta (indo)
-┃╠${prefix}cocoknama (indo)
-┃╠${prefix}pasangan (indo)
-┃╠${prefix}jadiannikah (indo)
-┃╠${prefix}sifatusaha (indo)
-┃╠${prefix}rezeki (indo)
-┃╠${prefix}pekerjaan (indo)
-┃╠${prefix}nasib (indo)
-┃╠${prefix}penyakit (indo)
-┃╠${prefix}tarot (indo)
-┃╠${prefix}fengshui (indo)
-┃╠${prefix}haribaik (indo)
-┃╠${prefix}harisangar (indo)
-┃╠${prefix}harisial (indo)
-┃╠${prefix}nagahari (indo)
-┃╠${prefix}arahrezeki (indo)
-┃╠${prefix}peruntungan (indo)
-┃╠${prefix}weton (indo)
-┃╠${prefix}karakter (indo)
-┃╠${prefix}keberuntungan (indo)
-┃╠${prefix}memancing (indo)
-┃╠${prefix}masasubur (indo)
-┃╠${prefix}zodiak (indo)
-┃╠${prefix}shio (indo)
-┃╚═══════✍︎𝑁𝑒𝑥𝑢𝑠𝑁𝑤
-┗━「 *Created By ${ownername}*  𖠌」━⭓`
+┃╔══⛨「 MAIN 」⛨
+┃☆⚩${prefix}alive
+┃☆⚩${prefix}script
+┃☆⚩${prefix}speedtest
+┃☆⚩${prefix}ping
+┃☆⚩${prefix}owner
+┃☆⚩${prefix}menu
+┃☆⚩${prefix}delete
+┃☆⚩${prefix}chatinfo
+┃☆⚩${prefix}quoted
+┃☆⚩${prefix}listpc
+┃☆⚩${prefix}listgc
+┃☆⚩${prefix}donate
+┃☆⚩${prefix}report [bug]
+┃☆⚩══⛨ⒼⒷⓈ⛨「 OWNER 」 ⛨
+┃☆⚩${prefix}chat [option]
+┃☆⚩${prefix}join [link]
+┃☆⚩${prefix}leave
+┃☆⚩${prefix}block [user]
+┃☆⚩${prefix}unblock [user]
+┃☆⚩${prefix}bcgroup [text]
+┃☆⚩${prefix}bcall [text]
+┃☆⚩${prefix}setppbot [image]
+┃☆⚩${prefix}setexif
+┃☆⚩══⛨ⒼⒷⓈ⛨「 GROUP 」 ⛨      
+┃☆⚩${prefix}grouplink
+┃☆⚩${prefix}ephemeral [option]
+┃☆⚩${prefix}setgcpp [image]
+┃☆⚩${prefix}setname [text]
+┃☆⚩${prefix}setdesc [text]
+┃☆⚩${prefix}group [text]
+┃☆⚩${prefix}editinfo [option]
+┃☆⚩${prefix}add [user]
+┃☆⚩${prefix}kick [reply/tag]
+┃☆⚩${prefix}hidetag [text]
+┃☆⚩${prefix}tagall [text]
+┃☆⚩${prefix}antilink [on/off]
+┃☆⚩${prefix}mute [on/off]
+┃☆⚩${prefix}promote [reply/tag]
+┃☆⚩${prefix}demote [reply/tag]
+┃☆⚩${prefix}vote
+┃☆⚩${prefix}devote
+┃☆⚩${prefix}upvote
+┃☆⚩${prefix}checkvote
+┃☆⚩${prefix}delvote
+┃☆⚩══⛨「 RPG 」 ⛨
+┃☆⚩${prefix}hunting
+┃☆⚩${prefix}mining
+┃☆⚩${prefix}heal
+┃☆⚩${prefix}userlimit
+┃☆⚩${prefix}profile
+┃☆⚩${prefix}inventory
+┃☆⚩${prefix}leaderboard
+┃☆⚩${prefix}buy [option]
+┃☆⚩${prefix}sell [option]
+┃☆⚩═⛨ⒼⒷⓈ⛨「 DOWNLOADER 」⛨
+┃☆⚩${prefix}ytmp3 [url|quality]
+┃☆⚩${prefix}ytmp4 [url|quality]
+┃☆⚩${prefix}getmusic [yt link]
+┃☆⚩${prefix}getvideo [yt link]
+┃☆⚩${prefix}umma [query]
+┃☆⚩${prefix}joox [query]
+┃☆⚩${prefix}soundcloud [url]
+┃☆⚩══⛨ⒼⒷⓈ⛨「 SEARCHER 」 ⛨
+┃☆⚩${prefix}play [query]
+┃☆⚩${prefix}song [query]
+┃☆⚩${prefix}yts [query]
+┃☆⚩${prefix}google [query]
+┃☆⚩${prefix}gimage [query]
+┃☆⚩${prefix}pinterest [query]
+┃☆⚩${prefix}wallpaper [query]
+┃☆⚩${prefix}wikimedia [query]
+┃☆⚩${prefix}ytsearch [query]
+┃☆⚩${prefix}ringtone [query]
+┃☆⚩${prefix}webtoon [query]
+┃☆⚩══⛨ⒼⒷⓈ⛨「 RANDOM 」⛨
+┃☆⚩${prefix}coffee
+┃☆⚩${prefix}animequote (indo)
+┃☆⚩${prefix}couplepp
+┃☆⚩═⛨ⒼⒷⓈ⛨「 RANDOM ANIME 」⛨
+┃☆⚩${prefix}loli
+┃☆⚩${prefix}bully
+┃☆⚩${prefix}cuddle
+┃☆⚩${prefix}cry
+┃☆⚩${prefix}hug
+┃☆⚩${prefix}awoo
+┃☆⚩${prefix}kiss
+┃☆⚩${prefix}lick
+┃☆⚩${prefix}pat
+┃☆⚩${prefix}smug
+┃☆⚩${prefix}bonk
+┃☆⚩${prefix}yeet
+┃☆⚩${prefix}blush
+┃☆⚩${prefix}smile
+┃☆⚩${prefix}wave
+┃☆⚩${prefix}highfive
+┃☆⚩${prefix}handhold
+┃☆⚩${prefix}nom
+┃☆⚩${prefix}glomp
+┃☆⚩${prefix}bite
+┃☆⚩${prefix}slap
+┃☆⚩${prefix}kill
+┃☆⚩${prefix}happy
+┃☆⚩${prefix}wink
+┃☆⚩${prefix}poke
+┃☆⚩${prefix}dance
+┃☆⚩${prefix}cringe
+┃☆⚩══⛨ⒼⒷⓈ⛨「 FUN 」 ⛨
+┃☆⚩${prefix}how [text
+┃☆⚩${prefix}when [text]
+┃☆⚩${prefix}is [text]
+┃☆⚩${prefix}what [text]
+┃☆⚩${prefix}can [text]
+┃☆⚩${prefix}rate [text]
+┃☆⚩${prefix}wangy [text]
+┃☆⚩${prefix}beautifulcheck [tag]
+┃☆⚩${prefix}awesomecheck [tag]
+┃☆⚩${prefix}prettycheck [tag]
+┃☆⚩${prefix}lesbiancheck [tag]
+┃☆⚩${prefix}gaycheck [tag]
+┃☆⚩${prefix}cutecheck [tag]
+┃☆⚩${prefix}uglycheck [tag]
+┃☆⚩${prefix}hornycheck [tag]
+┃☆⚩${prefix}charactercheck [tag]
+┃☆⚩${prefix}lovelycheck [tag]
+┃☆⚩${prefix}couple
+┃☆⚩${prefix}mysoulmate
+┃☆⚩${prefix}hot
+┃☆⚩${prefix}sexy
+┃☆⚩${prefix}kind
+┃☆⚩${prefix}idiot
+┃☆⚩${prefix}handsome
+┃☆⚩${prefix}beautiful
+┃☆⚩${prefix}cute
+┃☆⚩${prefix}pretty
+┃☆⚩${prefix}lesbian
+┃☆⚩${prefix}noob
+┃☆⚩${prefix}bastard
+┃☆⚩${prefix}foolish
+┃☆⚩${prefix}nerd
+┃☆⚩${prefix}asshole
+┃☆⚩${prefix}gay
+┃☆⚩${prefix}smart
+┃☆⚩${prefix}stubble
+┃☆⚩${prefix}dog
+┃☆⚩${prefix}horny
+┃☆⚩${prefix}cunt
+┃☆⚩${prefix}wibu
+┃☆⚩${prefix}tictactoe
+┃☆⚩${prefix}delttt
+┃☆⚩${prefix}guess [option]
+┃☆⚩${prefix}math [mode]
+┃☆⚩${prefix}suitpvp [tag]
+┃☆⚩═══⛨ⒼⒷⓈ⛨「 CONVERTER 」 ⛨
+┃☆⚩${prefix}toimage [reply stick]
+┃☆⚩${prefix}sticker [reply img|gif]
+┃☆⚩${prefix}emojimix [moji+moji]
+┃☆⚩${prefix}tovideo [reply img]
+┃☆⚩${prefix}togif [reply stick]
+┃☆⚩${prefix}tourl [reply img]
+┃☆⚩${prefix}tovn [reply aud]
+┃☆⚩${prefix}tomp3 [reply vn]
+┃☆⚩${prefix}toaudio [reply vid]
+┃☆⚩${prefix}ebinary [reply txt]
+┃☆⚩${prefix}dbinary [reply txt]
+┃☆⚩${prefix}styletext [text]
+┃☆⚩══⛨ⒼⒷⓈ⛨「 DATABASE 」 ⛨
+┃☆⚩${prefix}setcmd
+┃☆⚩${prefix}listcmd
+┃☆⚩${prefix}delcmd
+┃☆⚩${prefix}lockcmd
+┃☆⚩${prefix}addmsg
+┃☆⚩${prefix}listmsg
+┃☆⚩${prefix}getmsg
+┃☆⚩${prefix}delmsg
+┃☆⚩═⛨ⒼⒷⓈ⛨「 ANONYMOUS CHAT 」⛨
+┃☆⚩${prefix}anonymous
+┃☆⚩${prefix}start
+┃☆⚩${prefix}next
+┃☆⚩${prefix}leave
+┃☆⚩═⛨ⒼⒷⓈ⛨「 VOICE CHANGER 」⛨
+┃☆⚩${prefix}bass [reply aud]
+┃☆⚩${prefix}blown [reply aud]
+┃☆⚩${prefix}deep [reply aud]
+┃☆⚩${prefix}earrape [reply aud]
+┃☆⚩${prefix}fast [reply aud]
+┃☆⚩${prefix}fat [reply aud]
+┃☆⚩${prefix}nightcore [reply aud]
+┃☆⚩${prefix}reverse [reply aud]
+┃☆⚩${prefix}robot [reply aud]
+┃☆⚩${prefix}slow [reply aud]
+┃☆⚩${prefix}squirrel [reply aud]
+┃☆⚩══⛨ⒼⒷⓈ⛨「 ISLAMIC 」⛨
+┃☆⚩${prefix}juzamma
+┃☆⚩══⛨ⒼⒷⓈ⛨「 HOROSCOPE 」⛨
+┃☆⚩${prefix}nomorhoki (indo)
+┃☆⚩${prefix}artimimpi (indo)
+┃☆⚩${prefix}artinama (indo)
+┃☆⚩${prefix}ramaljodoh (indo)
+┃☆⚩${prefix}ramaljodohbali (indo)
+┃☆⚩${prefix}suamiistri (indo)
+┃☆⚩${prefix}ramalcinta (indo)
+┃☆⚩${prefix}cocoknama (indo)
+┃☆⚩${prefix}pasangan (indo)
+┃☆⚩${prefix}jadiannikah (indo)
+┃☆⚩${prefix}sifatusaha (indo)
+┃☆⚩${prefix}rezeki (indo)
+┃☆⚩${prefix}pekerjaan (indo)
+┃☆⚩${prefix}nasib (indo)
+┃☆⚩${prefix}penyakit (indo)
+┃☆⚩${prefix}tarot (indo)
+┃☆⚩${prefix}fengshui (indo)
+┃☆⚩${prefix}haribaik (indo)
+┃☆⚩${prefix}harisangar (indo)
+┃☆⚩${prefix}harisial (indo)
+┃☆⚩${prefix}nagahari (indo)
+┃☆⚩${prefix}arahrezeki (indo)
+┃☆⚩${prefix}peruntungan (indo)
+┃☆⚩${prefix}weton (indo)
+┃☆⚩${prefix}karakter (indo)
+┃☆⚩${prefix}keberuntungan (indo)
+┃☆⚩${prefix}memancing (indo)
+┃☆⚩${prefix}masasubur (indo)
+┃☆⚩${prefix}zodiak (indo)
+┃☆⚩${prefix}shio (indo)
+┃╚═══════⛨ⒼⒷⓈ⛨
+┗━「 *Created By ${ownername}*  ☆」━⭓`
     const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
@@ -3865,12 +3853,12 @@ case 'allmenu': {
                             hydratedFooterText: `${pushname}`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'YouTube📍',
+                                    displayText: '📺Utube📺',
                                     url: `${myweb}`
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '👤Owner👤',
+                                    displayText: '😈Creator👿',
                                     id: `${prefix}owner`
                                 }
                             }]
@@ -3884,391 +3872,392 @@ case 'mainmenu':
 var unicorn = await getBuffer(picak+'Main Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔═✪「 MAIN 」
-┃╠ ${prefix}alive
-┃╠ ${prefix}script
-┃╠ ${prefix}speedtest
-┃╠ ${prefix}ping
-┃╠ ${prefix}owner
-┃╠ ${prefix}menu
-┃╠ ${prefix}delete
-┃╠ ${prefix}chatinfo
-┃╠ ${prefix}quoted
-┃╠ ${prefix}listpc
-┃╠ ${prefix}listgc
-┃╠ ${prefix}donate
-┃╠ ${prefix}report [bug]
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${myweb}`}},{"urlButton": {"displayText": "Script🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┃╔═⛨ⒼⒷⓈ⛨「 MAIN 」
+┃☆⚩${prefix}alive
+┃☆⚩${prefix}script
+┃☆⚩${prefix}speedtest
+┃☆⚩${prefix}ping
+┃☆⚩${prefix}owner
+┃☆⚩${prefix}menu
+┃☆⚩${prefix}delete
+┃☆⚩${prefix}chatinfo
+┃☆⚩${prefix}quoted
+┃☆⚩${prefix}listpc
+┃☆⚩${prefix}listgc
+┃☆⚩${prefix}donate
+┃☆⚩${prefix}report [bug]
+┃╚═════════════⛨ⒼⒷⓈ⛨
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${myweb}`}},{"urlButton": {"displayText": "🖋Source","url": `${sc}`}},{"quickReplyButton": {"displayText": "💰Tip💰","id": 'donate'}},{"quickReplyButton": {"displayText": "😈Creator👿","id": 'owner'}}] )
 break
 
 case 'grupmenu': case 'groupmenu':
 var unicorn = await getBuffer(picak+'Group Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔═✪「 GROUP 」	        
-┃╠${prefix}grouplink
-┃╠${prefix}ephemeral [option]
-┃╠${prefix}setgcpp [image]
-┃╠${prefix}setname [text]
-┃╠${prefix}setdesc [text]
-┃╠${prefix}group [text]
-┃╠${prefix}editinfo [option]
-┃╠${prefix}add [user]
-┃╠${prefix}kick [reply/tag]
-┃╠${prefix}hidetag [text]
-┃╠${prefix}tagall [text]
-┃╠${prefix}antilink [on/off]
-┃╠${prefix}mute [on/off]
-┃╠${prefix}promote [reply/tag]
-┃╠${prefix}demote [reply/tag]
-┃╠${prefix}vote
-┃╠${prefix}devote
-┃╠${prefix}upvote
-┃╠${prefix}checkvote
-┃╠${prefix}delvote
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}},{"urlButton": {"displayText": "Script🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┃╔═⛨ⒼⒷⓈ⛨「 GROUP 」	        
+┃☆⚩${prefix}grouplink
+┃☆⚩${prefix}ephemeral [option]
+┃☆⚩${prefix}setgcpp [image]
+┃☆⚩${prefix}setname [text]
+┃☆⚩${prefix}setdesc [text]
+┃☆⚩${prefix}group [text]
+┃☆⚩${prefix}editinfo [option]
+┃☆⚩${prefix}add [user]
+┃☆⚩${prefix}kick [reply/tag]
+┃☆⚩${prefix}hidetag [text]
+┃☆⚩${prefix}tagall [text]
+┃☆⚩${prefix}antilink [on/off]
+┃☆⚩${prefix}mute [on/off]
+┃☆⚩${prefix}promote [reply/tag]
+┃☆⚩${prefix}demote [reply/tag]
+┃☆⚩${prefix}vote
+┃☆⚩${prefix}devote
+┃☆⚩${prefix}upvote
+┃☆⚩${prefix}checkvote
+┃☆⚩${prefix}delvote
+┃╚═════════════⛨ⒼⒷⓈ⛨
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "📺Utube📺","url": `${myweb}`}},{"urlButton": {"displayText": "🖋Source","url": `${sc}`}},{"quickReplyButton": {"displayText": "💰Tip💰","id": 'donate'}},{"quickReplyButton": {"displayText": "😈Creator👿","id": 'owner'}}] )
 break
 
 case 'rpgmenu':
 var unicorn = await getBuffer(picak+'Rpg Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔═✪「 RPG 」	        
-┃╠${prefix}hunting
-┃╠${prefix}mining
-┃╠${prefix}heal
-┃╠${prefix}limituser
-┃╠${prefix}profile
-┃╠${prefix}inventory
-┃╠${prefix}leaderboard
-┃╠${prefix}buy [option]
-┃╠${prefix}sell [option]
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}},{"urlButton": {"displayText": "Script🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┃╔═⛨ⒼⒷⓈ⛨「 RPG 」	        
+┃☆⚩${prefix}hunting
+┃☆⚩${prefix}mining
+┃☆⚩${prefix}heal
+┃☆⚩${prefix}limituser
+┃☆⚩${prefix}profile
+┃☆⚩${prefix}inventory
+┃☆⚩${prefix}leaderboard
+┃☆⚩${prefix}buy [option]
+┃☆⚩${prefix}sell [option]
+┃╚═════════════⛨ⒼⒷⓈ⛨
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "📺Utube📺","url": `${myweb}`}},{"urlButton": {"displayText": "🖋Source","url": `${sc}`}},{"quickReplyButton": {"displayText": "💰Tip💰","id": 'donate'}},{"quickReplyButton": {"displayText": "😈Creator👿","id": 'owner'}}] )
 break
 
 case 'funmenu':
 var unicorn = await getBuffer(picak+'Fun Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔═✪「 FUN 」	        
-┃╠ ${prefix}how [text
-┃╠ ${prefix}when [text]
-┃╠ ${prefix}is [text]
-┃╠ ${prefix}what [text]
-┃╠ ${prefix}can [text]
-┃╠ ${prefix}rate [text]
-┃╠ ${prefix}wangy [text]
-┃╠ ${prefix}beautifulcheck [tag]
-┃╠ ${prefix}awesomecheck [tag]
-┃╠ ${prefix}prettycheck [tag]
-┃╠ ${prefix}lesbiancheck [tag]
-┃╠ ${prefix}gaycheck [tag]
-┃╠ ${prefix}cutecheck [tag]
-┃╠ ${prefix}uglycheck [tag]
-┃╠ ${prefix}hornycheck [tag]
-┃╠ ${prefix}charactercheck [tag]
-┃╠ ${prefix}lovelycheck [tag]
-┃╠ ${prefix}couple
-┃╠ ${prefix}mysoulmate
-┃╠ ${prefix}hot
-┃╠ ${prefix}sexy
-┃╠ ${prefix}kind
-┃╠ ${prefix}handsome
-┃╠ ${prefix}beautiful
-┃╠ ${prefix}cute
-┃╠ ${prefix}pretty
-┃╠ ${prefix}lesbian
-┃╠ ${prefix}noob
-┃╠ ${prefix}bastard
-┃╠ ${prefix}foolish
-┃╠ ${prefix}nerd
-┃╠ ${prefix}asshole
-┃╠ ${prefix}gay
-┃╠ ${prefix}smart
-┃╠ ${prefix}stubble
-┃╠ ${prefix}dog
-┃╠ ${prefix}horny
-┃╠ ${prefix}cunt
-┃╠ ${prefix}wibu
-┃╠ ${prefix}tictactoe
-┃╠ ${prefix}delttt
-┃╠ ${prefix}guess [option]
-┃╠ ${prefix}math [mode]
-┃╠ ${prefix}suitpvp [tag]
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}},{"urlButton": {"displayText": "Script🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┃╔═⛨ⒼⒷⓈ⛨「 FUN 」	        
+┃☆⚩${prefix}how [text
+┃☆⚩${prefix}when [text]
+┃☆⚩${prefix}is [text]
+┃☆⚩${prefix}what [text]
+┃☆⚩${prefix}can [text]
+┃☆⚩${prefix}rate [text]
+┃☆⚩${prefix}wangy [text]
+┃☆⚩${prefix}beautifulcheck [tag]
+┃☆⚩${prefix}awesomecheck [tag]
+┃☆⚩${prefix}prettycheck [tag]
+┃☆⚩${prefix}lesbiancheck [tag]
+┃☆⚩${prefix}gaycheck [tag]
+┃☆⚩${prefix}cutecheck [tag]
+┃☆⚩${prefix}uglycheck [tag]
+┃☆⚩${prefix}hornycheck [tag]
+┃☆⚩${prefix}charactercheck [tag]
+┃☆⚩${prefix}lovelycheck [tag]
+┃☆⚩${prefix}couple
+┃☆⚩${prefix}mysoulmate
+┃☆⚩${prefix}hot
+┃☆⚩${prefix}sexy
+┃☆⚩${prefix}kind
+┃☆⚩${prefix}handsome
+┃☆⚩${prefix}beautiful
+┃☆⚩${prefix}cute
+┃☆⚩${prefix}pretty
+┃☆⚩${prefix}lesbian
+┃☆⚩${prefix}noob
+┃☆⚩${prefix}bastard
+┃☆⚩${prefix}foolish
+┃☆⚩${prefix}nerd
+┃☆⚩${prefix}asshole
+┃☆⚩${prefix}gay
+┃☆⚩${prefix}smart
+┃☆⚩${prefix}stubble
+┃☆⚩${prefix}dog
+┃☆⚩${prefix}horny
+┃☆⚩${prefix}cunt
+┃☆⚩${prefix}wibu
+┃☆⚩${prefix}tictactoe
+┃☆⚩${prefix}delttt
+┃☆⚩${prefix}guess [option]
+┃☆⚩${prefix}math [mode]
+┃☆⚩${prefix}suitpvp [tag]
+┃╚═════════════⛨ⒼⒷⓈ⛨
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "📺Utube📺","url": `${myweb}`}},{"urlButton": {"displayText": "🖋Source","url": `${sc}`}},{"quickReplyButton": {"displayText": "💰Tip💰","id": 'donate'}},{"quickReplyButton": {"displayText": "😈Creator👿","id": 'owner'}}] )
 break
 
 case 'ownermenu':
 var unicorn = await getBuffer(picak+'Owner Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔═✪「 OWNER 」	        
-┃╠${prefix}grouplink
-┃╠${prefix}ephemeral [option]
-┃╠${prefix}setgcpp [image]
-┃╠${prefix}setname [text]
-┃╠${prefix}setdesc [text]
-┃╠${prefix}group [text]
-┃╠${prefix}editinfo [option]
-┃╠${prefix}add [user]
-┃╠${prefix}kick [reply/tag]
-┃╠${prefix}hidetag [text]
-┃╠${prefix}tagall [text]
-┃╠${prefix}antilink [on/off]
-┃╠${prefix}mute [on/off]
-┃╠${prefix}promote [reply/tag]
-┃╠${prefix}demote [reply/tag]
-┃╠${prefix}vote
-┃╠${prefix}devote
-┃╠${prefix}upvote
-┃╠${prefix}checkvote
-┃╠${prefix}delvote
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}},{"urlButton": {"displayText": "Script🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┃╔═⛨ⒼⒷⓈ⛨「 OWNER 」	        
+┃☆⚩${prefix}grouplink
+┃☆⚩${prefix}ephemeral [option]
+┃☆⚩${prefix}setgcpp [image]
+┃☆⚩${prefix}setname [text]
+┃☆⚩${prefix}setdesc [text]
+┃☆⚩${prefix}group [text]
+┃☆⚩${prefix}editinfo [option]
+┃☆⚩${prefix}add [user]
+┃☆⚩${prefix}kick [reply/tag]
+┃☆⚩${prefix}hidetag [text]
+┃☆⚩${prefix}tagall [text]
+┃☆⚩${prefix}antilink [on/off]
+┃☆⚩${prefix}mute [on/off]
+┃☆⚩${prefix}promote [reply/tag]
+┃☆⚩${prefix}demote [reply/tag]
+┃☆⚩${prefix}vote
+┃☆⚩${prefix}devote
+┃☆⚩${prefix}upvote
+┃☆⚩${prefix}checkvote
+┃☆⚩${prefix}delvote
+┃╚═════════════⛨ⒼⒷⓈ⛨
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "📺Utube📺","url": `${myweb}`}},{"urlButton": {"displayText": "🖋Source","url": `${sc}`}},{"quickReplyButton": {"displayText": "💰Tip💰","id": 'donate'}},{"quickReplyButton": {"displayText": "😈Creator👿","id": 'owner'}}] )
 break
 case 'downloadmenu':
 var unicorn = await getBuffer(picak+'Downloader Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔═✪「 DOWNLOADER 」	        
-┃╠${prefix}ytmp3 [url|quality]
-┃╠${prefix}ytmp4 [url|quality]
-┃╠${prefix}getmusic [yt link]
-┃╠${prefix}getvideo [yt link]
-┃╠${prefix}umma [query]
-┃╠${prefix}joox [query]
-┃╠${prefix}soundcloud [url]
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}},{"urlButton": {"displayText": "Script🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┃╔═⛨ⒼⒷⓈ⛨「 DOWNLOADER 」	        
+┃☆⚩${prefix}ytmp3 [url|quality]
+┃☆⚩${prefix}ytmp4 [url|quality]
+┃☆⚩${prefix}getmusic [yt link]
+┃☆⚩${prefix}getvideo [yt link]
+┃☆⚩${prefix}umma [query]
+┃☆⚩${prefix}joox [query]
+┃☆⚩${prefix}soundcloud [url]
+┃╚═════════════⛨ⒼⒷⓈ⛨
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "📺Utube📺","url": `${myweb}`}},{"urlButton": {"displayText": "🖋Source","url": `${sc}`}},{"quickReplyButton": {"displayText": "💰Tip💰","id": 'donate'}},{"quickReplyButton": {"displayText": "😈Creator👿","id": 'owner'}}] )
 break
 case 'searchmenu':
 var unicorn = await getBuffer(picak+'Search Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 SEARCHER 」	        
-┃╠${prefix}play [query]
-┃╠${prefix}song [query]
-┃╠${prefix}yts [query]
-┃╠${prefix}google [query]
-┃╠${prefix}gimage [query]
-┃╠${prefix}pinterest [query]
-┃╠${prefix}wallpaper [query]
-┃╠${prefix}wikimedia [query]
-┃╠${prefix}ytsearch [query]
-┃╠${prefix}ringtone [query]
-┃╠${prefix}webtoon [query]
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}},{"urlButton": {"displayText": "Script🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┃╔══⛨ⒼⒷⓈ⛨「 SEARCHER 」	        
+┃☆⚩${prefix}play [query]
+┃☆⚩${prefix}song [query]
+┃☆⚩${prefix}yts [query]
+┃☆⚩${prefix}google [query]
+┃☆⚩${prefix}gimage [query]
+┃☆⚩${prefix}pinterest [query]
+┃☆⚩${prefix}wallpaper [query]
+┃☆⚩${prefix}wikimedia [query]
+┃☆⚩${prefix}ytsearch [query]
+┃☆⚩${prefix}ringtone [query]
+┃☆⚩${prefix}webtoon [query]
+┃╚═════════════⛨ⒼⒷⓈ⛨
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "📺Utube📺","url": `${myweb}`}},{"urlButton": {"displayText": "🖋Source","url": `${sc}`}},{"quickReplyButton": {"displayText": "💰Tip💰","id": 'donate'}},{"quickReplyButton": {"displayText": "😈Creator👿","id": 'owner'}}] )
 break
 case 'randommenu':
 var unicorn = await getBuffer(picak+'Random Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 RANDOM 」	        
-┃╠${prefix}coffee
-┃╠${prefix}animequote (indo)
-┃╠${prefix}couplepp
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}},{"urlButton": {"displayText": "Script🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┃╔══⛨ⒼⒷⓈ⛨「 RANDOM 」	        
+┃☆⚩${prefix}coffee
+┃☆⚩${prefix}animequote (indo)
+┃☆⚩${prefix}couplepp
+┃╚═════════════⛨ⒼⒷⓈ⛨
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "📺Utube📺","url": `${myweb}`}},{"urlButton": {"displayText": "🖋Source","url": `${sc}`}},{"quickReplyButton": {"displayText": "💰Tip💰","id": 'donate'}},{"quickReplyButton": {"displayText": "😈Creator👿","id": 'owner'}}] )
 break
 case 'randomanimemenu':
 var unicorn = await getBuffer(picak+'Random Anime Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔✪「 RANDOM ANIME 」	        
-┃╠${prefix}loli
-┃╠${prefix}bully
-┃╠${prefix}cuddle
-┃╠${prefix}cry
-┃╠${prefix}hug
-┃╠${prefix}awoo
-┃╠${prefix}kiss
-┃╠${prefix}lick
-┃╠${prefix}pat
-┃╠${prefix}smug
-┃╠${prefix}bonk
-┃╠${prefix}yeet
-┃╠${prefix}blush
-┃╠${prefix}smile
-┃╠${prefix}wave
-┃╠${prefix}highfive
-┃╠${prefix}handhold
-┃╠${prefix}nom
-┃╠${prefix}glomp
-┃╠${prefix}bite
-┃╠${prefix}slap
-┃╠${prefix}kill
-┃╠${prefix}happy
-┃╠${prefix}wink
-┃╠${prefix}poke
-┃╠${prefix}dance
-┃╠${prefix}cringe
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}},{"urlButton": {"displayText": "Script🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┃╔⛨ⒼⒷⓈ⛨「 RANDOM ANIME 」	        
+┃☆⚩${prefix}loli
+┃☆⚩${prefix}bully
+┃☆⚩${prefix}cuddle
+┃☆⚩${prefix}cry
+┃☆⚩${prefix}hug
+┃☆⚩${prefix}awoo
+┃☆⚩${prefix}kiss
+┃☆⚩${prefix}lick
+┃☆⚩${prefix}pat
+┃☆⚩${prefix}smug
+┃☆⚩${prefix}bonk
+┃☆⚩${prefix}yeet
+┃☆⚩${prefix}blush
+┃☆⚩${prefix}smile
+┃☆⚩${prefix}wave
+┃☆⚩${prefix}highfive
+┃☆⚩${prefix}handhold
+┃☆⚩${prefix}nom
+┃☆⚩${prefix}glomp
+┃☆⚩${prefix}bite
+┃☆⚩${prefix}slap
+┃☆⚩${prefix}kill
+┃☆⚩${prefix}happy
+┃☆⚩${prefix}wink
+┃☆⚩${prefix}poke
+┃☆⚩${prefix}dance
+┃☆⚩${prefix}cringe
+┃╚═════════════⛨ⒼⒷⓈ⛨
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "📺Utube📺","url": `${myweb}`}},{"urlButton": {"displayText": "🖋Source","url": `${sc}`}},{"quickReplyButton": {"displayText": "💰Tip💰","id": 'donate'}},{"quickReplyButton": {"displayText": "😈Creator👿","id": 'owner'}}] )
 break
 case 'textpromenu':
 var unicorn = await getBuffer(picak+'Text Pro Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔═✪「 TEXT PRO 」	        
-┃╠ ${prefix}3dchristmas [txt]
-┃╠ ${prefix}3ddeepsea [txt]
-┃╠ ${prefix}americanflag [txt]
-┃╠ ${prefix}3dscifi [txt]
-┃╠ ${prefix}3drainbow [txt]
-┃╠ ${prefix}3dwaterpipe [txt]
-┃╠ ${prefix}halloweenskeleton [txt]
-┃╠ ${prefix}sketch [txt]
-┃╠ ${prefix}bluecircuit [txt]
-┃╠ ${prefix}space [txt]
-┃╠ ${prefix}metallic [txt]
-┃╠ ${prefix}fiction [txt]
-┃╠ ${prefix}greenhorror [txt]
-┃╠ ${prefix}transformer [txt]
-┃╠ ${prefix}berry [txt]
-┃╠ ${prefix}thunder [txt]
-┃╠ ${prefix}magma [txt]
-┃╠ ${prefix}3dcrackedstone [txt]
-┃╠ ${prefix}3dneonlight [txt]
-┃╠ ${prefix}impressiveglitch [txt]
-┃╠ ${prefix}naturalleaves [txt]
-┃╠ ${prefix}fireworksparkle [txt]
-┃╠ ${prefix}matrix [txt]
-┃╠ ${prefix}dropwater [txt]
-┃╠ ${prefix}harrypotter [txt]
-┃╠ ${prefix}foggywindow [txt]
-┃╠ ${prefix}neondevils [txt]
-┃╠ ${prefix}christmasholiday [txt]
-┃╠ ${prefix}3dgradient [txt]
-┃╠ ${prefix}blackpink [txt]
-┃╠ ${prefix}gluetext [txt]
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}},{"urlButton": {"displayText": "Script🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┃╔═⛨ⒼⒷⓈ⛨「 TEXT PRO 」	        
+┃☆⚩${prefix}3dchristmas [txt]
+┃☆⚩${prefix}3ddeepsea [txt]
+┃☆⚩${prefix}americanflag [txt]
+┃☆⚩${prefix}3dscifi [txt]
+┃☆⚩${prefix}3drainbow [txt]
+┃☆⚩${prefix}3dwaterpipe [txt]
+┃☆⚩${prefix}halloweenskeleton [txt]
+┃☆⚩${prefix}sketch [txt]
+┃☆⚩${prefix}bluecircuit [txt]
+┃☆⚩${prefix}space [txt]
+┃☆⚩${prefix}metallic [txt]
+┃☆⚩${prefix}fiction [txt]
+┃☆⚩${prefix}greenhorror [txt]
+┃☆⚩${prefix}transformer [txt]
+┃☆⚩${prefix}berry [txt]
+┃☆⚩${prefix}thunder [txt]
+┃☆⚩${prefix}magma [txt]
+┃☆⚩${prefix}3dcrackedstone [txt]
+┃☆⚩${prefix}3dneonlight [txt]
+┃☆⚩${prefix}impressiveglitch [txt]
+┃☆⚩${prefix}naturalleaves [txt]
+┃☆⚩${prefix}fireworksparkle [txt]
+┃☆⚩${prefix}matrix [txt]
+┃☆⚩${prefix}dropwater [txt]
+┃☆⚩${prefix}harrypotter [txt]
+┃☆⚩${prefix}foggywindow [txt]
+┃☆⚩${prefix}neondevils [txt]
+┃☆⚩${prefix}christmasholiday [txt]
+┃☆⚩${prefix}3dgradient [txt]
+┃☆⚩${prefix}blackpink [txt]
+┃☆⚩${prefix}gluetext [txt]
+┃╚═════════════⛨ⒼⒷⓈ⛨
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "📺Utube📺","url": `${myweb}`}},{"urlButton": {"displayText": "🖋Source","url": `${sc}`}},{"quickReplyButton": {"displayText": "💰Tip💰","id": 'donate'}},{"quickReplyButton": {"displayText": "😈Creator👿","id": 'owner'}}] )
 break
 case 'convertmenu':
 var unicorn = await getBuffer(picak+'Converter Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 CONVERTER 」	        
-┃╠ ${prefix}toimage [reply stick]
-┃╠ ${prefix}sticker [reply img|gif]
-┃╠ ${prefix}emojimix [moji+moji]
-┃╠ ${prefix}tovideo [reply img]
-┃╠ ${prefix}togif [reply stick]
-┃╠ ${prefix}tourl [reply media]
-┃╠ ${prefix}tovn [reply aud]
-┃╠ ${prefix}tomp3 [reply vn]
-┃╠ ${prefix}toaudio [reply vid]
-┃╠ ${prefix}ebinary [reply txt]
-┃╠ ${prefix}dbinary [reply txt]
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}},{"urlButton": {"displayText": "Script🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┃╔══⛨ⒼⒷⓈ⛨「 CONVERTER 」	        
+┃☆⚩${prefix}toimage [reply stick]
+┃☆⚩${prefix}sticker [reply img|gif]
+┃☆⚩${prefix}emojimix [moji+moji]
+┃☆⚩${prefix}tovideo [reply img]
+┃☆⚩${prefix}togif [reply stick]
+┃☆⚩${prefix}tourl [reply media]
+┃☆⚩${prefix}tovn [reply aud]
+┃☆⚩${prefix}tomp3 [reply vn]
+┃☆⚩${prefix}toaudio [reply vid]
+┃☆⚩${prefix}ebinary [reply txt]
+┃☆⚩${prefix}dbinary [reply txt]
+┃╚═════════════⛨ⒼⒷⓈ⛨
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "📺Utube📺","url": `${myweb}`}},{"urlButton": {"displayText": "🖋Source","url": `${sc}`}},{"quickReplyButton": {"displayText": "💰Tip💰","id": 'donate'}},{"quickReplyButton": {"displayText": "😈Creator👿","id": 'owner'}}] )
 break
 case 'databasemenu':
 var unicorn = await getBuffer(picak+'Database Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔═══✪「 DATABASE 」	        
-┃╠ ${prefix}setcmd
-┃╠ ${prefix}listcmd
-┃╠ ${prefix}delcmd
-┃╠ ${prefix}lockcmd
-┃╠ ${prefix}addmsg
-┃╠ ${prefix}listmsg
-┃╠ ${prefix}getmsg
-┃╠ ${prefix}delmsg
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}},{"urlButton": {"displayText": "Script🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┃╔═══⛨ⒼⒷⓈ⛨「 DATABASE 」	        
+┃☆⚩${prefix}setcmd
+┃☆⚩${prefix}listcmd
+┃☆⚩${prefix}delcmd
+┃☆⚩${prefix}lockcmd
+┃☆⚩${prefix}addmsg
+┃☆⚩${prefix}listmsg
+┃☆⚩${prefix}getmsg
+┃☆⚩${prefix}delmsg
+┃╚═════════════⛨ⒼⒷⓈ⛨
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "📺Utube📺","url": `${myweb}`}},{"urlButton": {"displayText": "🖋Source","url": `${sc}`}},{"quickReplyButton": {"displayText": "💰Tip💰","id": 'donate'}},{"quickReplyButton": {"displayText": "😈Creator👿","id": 'owner'}}] )
 break
 case 'databasemenu':
 var unicorn = await getBuffer(picak+'Database Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 ANONYMOUS CHAT 」	        
-┃╠${prefix}anonymous
-┃╠${prefix}start
-┃╠${prefix}next
-┃╠${prefix}leave
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}},{"urlButton": {"displayText": "Script🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┃╔══⛨ⒼⒷⓈ⛨「 ANONYMOUS CHAT 」	        
+┃☆⚩${prefix}anonymous
+┃☆⚩${prefix}start
+┃☆⚩${prefix}next
+┃☆⚩${prefix}leave
+┃╚═════════════⛨ⒼⒷⓈ⛨
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "📺Utube📺","url": `${myweb}`}},{"urlButton": {"displayText": "🖋Source","url": `${sc}`}},{"quickReplyButton": {"displayText": "💰Tip💰","id": 'donate'}},{"quickReplyButton": {"displayText": "😈Creator👿","id": 'owner'}}] )
 break
 case 'islamicmenu':
 var unicorn = await getBuffer(picak+'Islamic Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 ISLAMIC 」	        
-┃╠${prefix}juzamma
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}},{"urlButton": {"displayText": "Script🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┃╔══⛨ⒼⒷⓈ⛨「 ISLAMIC 」	        
+┃☆⚩${prefix}juzamma
+┃╚═════════════⛨ⒼⒷⓈ⛨
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "📺Utube📺","url": `${myweb}`}},{"urlButton": {"displayText": "🖋Source","url": `${sc}`}},{"quickReplyButton": {"displayText": "💰Tip💰","id": 'donate'}},{"quickReplyButton": {"displayText": "😈Creator👿","id": 'owner'}}] )
 break
 case 'voicechangermenu':
 var unicorn = await getBuffer(picak+'Voice Changer Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 VOICE CHANGER 」	        
-┃╠${prefix}bass [reply aud]
-┃╠${prefix}blown [reply aud]
-┃╠${prefix}deep [reply aud]
-┃╠${prefix}earrape [reply aud]
-┃╠${prefix}fast [reply aud]
-┃╠${prefix}fat [reply aud]
-┃╠${prefix}nightcore [reply aud]
-┃╠${prefix}reverse [reply aud]
-┃╠${prefix}robot [reply aud]
-┃╠${prefix}slow [reply aud]
-┃╠${prefix}squirrel [reply aud]
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}},{"urlButton": {"displayText": "Script🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┃╔══⛨ⒼⒷⓈ⛨「 VOICE CHANGER 」	        
+┃☆⚩${prefix}bass [reply aud]
+┃☆⚩${prefix}blown [reply aud]
+┃☆⚩${prefix}deep [reply aud]
+┃☆⚩${prefix}earrape [reply aud]
+┃☆⚩${prefix}fast [reply aud]
+┃☆⚩${prefix}fat [reply aud]
+┃☆⚩${prefix}nightcore [reply aud]
+┃☆⚩${prefix}reverse [reply aud]
+┃☆⚩${prefix}robot [reply aud]
+┃☆⚩${prefix}slow [reply aud]
+┃☆⚩${prefix}squirrel [reply aud]
+┃╚═════════════⛨ⒼⒷⓈ⛨
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "📺Utube📺","url": `${myweb}`}},{"urlButton": {"displayText": "🖋Source","url": `${sc}`}},{"quickReplyButton": {"displayText": "💰Tip💰","id": 'donate'}},{"quickReplyButton": {"displayText": "😈Creator👿","id": 'owner'}}] )
 break
 case 'horoscopemenu':
 var unicorn = await getBuffer(picak+'Horoscope Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 HOROSCOPE 」	        
-┃╠${prefix}nomorhoki (indo)
-┃╠${prefix}artimimpi (indo)
-┃╠${prefix}artinama (indo)
-┃╠${prefix}ramaljodoh (indo)
-┃╠${prefix}ramaljodohbali (indo)
-┃╠${prefix}suamiistri (indo)
-┃╠${prefix}ramalcinta (indo)
-┃╠${prefix}cocoknama (indo)
-┃╠${prefix}pasangan (indo)
-┃╠${prefix}jadiannikah (indo)
-┃╠${prefix}sifatusaha (indo)
-┃╠${prefix}rezeki (indo)
-┃╠${prefix}pekerjaan (indo)
-┃╠${prefix}nasib (indo)
-┃╠${prefix}penyakit (indo)
-┃╠${prefix}tarot (indo)
-┃╠${prefix}fengshui (indo)
-┃╠${prefix}haribaik (indo)
-┃╠${prefix}harisangar (indo)
-┃╠${prefix}harisial (indo)
-┃╠${prefix}nagahari (indo)
-┃╠${prefix}arahrezeki (indo)
-┃╠${prefix}peruntungan (indo)
-┃╠${prefix}weton (indo)
-┃╠${prefix}karakter (indo)
-┃╠${prefix}keberuntungan (indo)
-┃╠${prefix}memancing (indo)
-┃╠${prefix}masasubur (indo)
-┃╠${prefix}zodiak (indo)
-┃╠${prefix}shio (indo)
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}},{"urlButton": {"displayText": "Script🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┃╔══⛨ⒼⒷⓈ⛨「 HOROSCOPE 」	        
+┃☆⚩${prefix}nomorhoki (indo)
+┃☆⚩${prefix}artimimpi (indo)
+┃☆⚩${prefix}artinama (indo)
+┃☆⚩${prefix}ramaljodoh (indo)
+┃☆⚩${prefix}ramaljodohbali (indo)
+┃☆⚩${prefix}suamiistri (indo)
+┃☆⚩${prefix}ramalcinta (indo)
+┃☆⚩${prefix}cocoknama (indo)
+┃☆⚩${prefix}pasangan (indo)
+┃☆⚩${prefix}jadiannikah (indo)
+┃☆⚩${prefix}sifatusaha (indo)
+┃☆⚩${prefix}rezeki (indo)
+┃☆⚩${prefix}pekerjaan (indo)
+┃☆⚩${prefix}nasib (indo)
+┃☆⚩${prefix}penyakit (indo)
+┃☆⚩${prefix}tarot (indo)
+┃☆⚩${prefix}fengshui (indo)
+┃☆⚩${prefix}haribaik (indo)
+┃☆⚩${prefix}harisangar (indo)
+┃☆⚩${prefix}harisial (indo)
+┃☆⚩${prefix}nagahari (indo)
+┃☆⚩${prefix}arahrezeki (indo)
+┃☆⚩${prefix}peruntungan (indo)
+┃☆⚩${prefix}weton (indo)
+┃☆⚩${prefix}karakter (indo)
+┃☆⚩${prefix}keberuntungan (indo)
+┃☆⚩${prefix}memancing (indo)
+┃☆⚩${prefix}masasubur (indo)
+┃☆⚩${prefix}zodiak (indo)
+┃☆⚩${prefix}shio (indo)
+┃╚═════════════⛨ⒼⒷⓈ⛨
+┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "📺Utube📺","url": `${myweb}`}},{"urlButton": {"displayText": "🖋Source","url": `${sc}`}},{"quickReplyButton": {"displayText": "💰Tip💰","id": 'donate'}},{"quickReplyButton": {"displayText": "😈Creator👿","id": 'owner'}}] )
 break
 case 'thanksto': case 'tqto': case 'tqtt':
 var unicorn = await getBuffer(picak+'Developer')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-Thanks to Me ( NexusNw)
-Alien-Alfa (For helping me to deploy qr in replit and answered my every doubts regard this project)
-DGXeon ( 45% Credits goes to him ,in this script)
-And Again Me (King Nexus 🎉) 🐦 Who Helped Assemble This Sexy Script !!!`,unicorn, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}},{"urlButton": {"displayText": "Script🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+GINGER-recode🥰
+NexusNw-Base🥸
+Alien-Alfa -Session😎
+DGXeon -Original Script🤩
+ALL OF USERS🎉) ⛷ !!!`,unicorn, [{"urlButton": {"displayText": "📺Utube📺","url": `${myweb}`}},{"urlButton": {"displayText": "🖋Source","url": `${sc}`}},{"quickReplyButton": {"displayText": "💰Tip💰","id": 'donate'}},{"quickReplyButton": {"displayText": "😈Creator👿","id": 'owner'}}] )
 break
             default:
                 if (budy.startsWith('=>')) {
