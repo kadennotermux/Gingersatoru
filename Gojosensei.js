@@ -2104,11 +2104,11 @@ break
             break
 	    case 'ytmp3': case 'getmusic': case 'ytaudio': {
                 let { yta } = require('./lib/y2mate')
-                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
-                let quality = args[1] ? args[1] : '128kbps'
+                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 320kbps`)
+                let quality = args[1] ? args[1] : '320kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                GojoMdNx.sendImage(m.chat, media.thumb, `⛷ Title : ${media.title}\n⛷ File Size : ${media.filesizeF}\n⛷ Url : ${isUrl(text)}\n⛷ Ext : MP3\n⛷ Resolution : ${args[1] || '128kbps'}`, m)
+                GojoMdNx.sendImage(m.chat, media.thumb, `⛷ Title : ${media.title}\n⛷ File Size : ${media.filesizeF}\n⛷ Url : ${isUrl(text)}\n⛷ Ext : MP3\n⛷ Resolution : ${args[1] || '320kbps'}`, m)
                 GojoMdNx.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
@@ -2124,10 +2124,10 @@ break
 	    case 'getmusicxxx': {
                 let { yta } = require('./lib/y2mate')
 		let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?youtube\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
-                let quality = args[1] ? args[1] : '128kbps'
+                let quality = args[1] ? args[1] : '320kbps'
                 let media = await yta(urls[text - 1], quality)
                 if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
-                GojoMdNx.sendImage(m.chat, media.thumb, `⛷ Title : ${media.title}\n⛷ File Size : ${media.filesizeF}\n⛷ Url : ${urls[text - 1]}\n⛷ Ext : MP3\n⛷ Resolution : ${args[1] || '128kbps'}`, m)
+                GojoMdNx.sendImage(m.chat, media.thumb, `⛷ Title : ${media.title}\n⛷ File Size : ${media.filesizeF}\n⛷ Url : ${urls[text - 1]}\n⛷ Ext : MP3\n⛷ Resolution : ${args[1] || '320kbps'}`, m)
                 GojoMdNx.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
@@ -2909,7 +2909,7 @@ break
 		let anu = await umma(isUrl(text)[0])
 		if (anu.type == 'video') {
 		    let buttons = [
-                        {buttonId: `ytmp3 ${anu.media[0]} 128kbps`, buttonText: {displayText: '🎵Audio🎵'}, type: 1},
+                        {buttonId: `ytmp3 ${anu.media[0]} 320kbps`, buttonText: {displayText: '🎵Audio🎵'}, type: 1},
                         {buttonId: `ytmp4 ${anu.media[0]} 360p`, buttonText: {displayText: '📽️Video📽️'}, type: 1}
                     ]
 		    let buttonMessage = {
@@ -3382,14 +3382,14 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedFooterText: `┌─🇰🇪
 │「 OYAAAAH👿👿 Bot is Alive & Functioning」
 └┬🇰🇪 「 ${pushname} 」
-┌┤⛨⚩  *COMRADES!! CHOICE* 🤗🤩
+┌┤⛨⚩  COMRADES!! CHOICE 🤗🤩
 ││⛨⚩  ⛷🖐️!!
 │└───────────────┈ ⛨ⒼⒷⓈ⛨
 │ 「 ⛨ʙᴏᴛ ɪɴғᴏ⛨」
 │☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
-│🤗 *ʙᴏᴛ ɴᴀᴍᴇ* : ${global.botname}
-│🤩 *ᴏᴡɴᴇʀ* : ${global.ownername}
-│👯 *ᴛᴏᴛᴀʟ ᴜsᴇʀs* : ${Object.keys(global.db.data.users).length}
+│🤗 ʙᴏᴛ ɴᴀᴍᴇ : ${global.botname}
+│🤩 ᴏᴡɴᴇʀ : ${global.ownername}
+│👯 ᴛᴏᴛᴀʟ ᴜsᴇʀs : ${Object.keys(global.db.data.users).length}
 └┬──────────────┈ ⛨ⒼⒷⓈ⛨
    │⛨⚩  Please Select The Button Below
    └───────────────┈ ⛨ⒼⒷⓈ⛨`,
@@ -3443,9 +3443,9 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 │└───────────────┈ ⛨ⒼⒷⓈ⛨
 │ 「 ⛨ʙᴏᴛ ɪɴғᴏ⛨」
 │☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
-│🤗 *ʙᴏᴛ ɴᴀᴍᴇ* : ${global.botname}
-│🤩 *ᴏᴡɴᴇʀ* : ${global.ownername}
-│👯 *ᴛᴏᴛᴀʟ ᴜsᴇʀs* : ${Object.keys(global.db.data.users).length}
+│🤗 ʙᴏᴛ ɴᴀᴍᴇ : ${global.botname}
+│🤩 ᴏᴡɴᴇʀ : ${global.ownername}
+│👯 ᴛᴏᴛᴀʟ ᴜsᴇʀs : ${Object.keys(global.db.data.users).length}
 └┬──────────────┈ ⛨ⒼⒷⓈ⛨
    │⛨⚩  Please Select The Button Below
    └───────────────┈ ⛨ⒼⒷⓈ⛨`,
